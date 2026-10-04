@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Task 1 Studio – IELTS Academic Writing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f1f4fa; --surface:#ffffff; --surface2:#e9eef8; --ink:#14213d; --muted:#55627f; --line:#d3dbec; --grid:#d9e0ee;
+  --accent:#2447d6; --hl:#ffe14d; --hl-ink:#14213d; --paper:#f7f9ff; --paper-line:#e1e7f4;
+  --good:#16794f; --bad:#b92d22;
+  --font-body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --font-head:'Bricolage Grotesque','Instrument Sans',system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1323; --surface:#141d33; --surface2:#1a2540; --ink:#e9edf8; --muted:#a0abc8; --line:#2a3656; --grid:#26324f;
+    --accent:#86a0ff; --paper:#0f1830; --paper-line:#18223d; --good:#4cc790; --bad:#ff7d70; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1323; --surface:#141d33; --surface2:#1a2540; --ink:#e9edf8; --muted:#a0abc8; --line:#2a3656; --grid:#26324f;
+  --accent:#86a0ff; --paper:#0f1830; --paper-line:#18223d; --good:#4cc790; --bad:#ff7d70; color-scheme:dark;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--font-body);-webkit-font-smoothing:antialiased;text-size-adjust:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--font-head);margin:0;letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.shell{max-width:1360px;margin:0 auto;padding:18px clamp(12px,3vw,30px) 56px}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:46px;height:46px;flex:none;border-radius:12px;background:var(--hl);color:var(--hl-ink);display:grid;place-items:center}
+.brand h1{font-size:28px;line-height:1.05;font-weight:800}
+.brand p{margin:3px 0 0;color:var(--muted);font-size:14px;max-width:62ch}
+.top-actions{display:flex;gap:8px}
+
+/* buttons */
+.btn{padding:8px 13px;border-radius:9px;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink);font-weight:600;font-size:13px;line-height:1.2}
+.btn:hover{background:var(--hl);color:var(--hl-ink)}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.solid:hover{background:var(--hl);color:var(--hl-ink)}
+.btn.soft{border-color:var(--line)}
+.btn.sm{padding:5px 9px;font-size:12px}
+.chip{padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font-size:13px;font-weight:600;line-height:1.2}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--hl);color:var(--hl-ink);border-color:var(--ink)}
+select.chip{padding-right:8px}
+
+/* 12 options */
+.opts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.opt{display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;padding:11px 12px 10px;border:1.5px solid var(--line);background:var(--surface);border-radius:11px;min-width:0}
+.opt svg{width:46px;height:31px;color:var(--muted);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.opt .ot{display:block}
+.opt b{font:700 14px/1.2 var(--font-head);display:block}
+.opt .sub{font-style:normal;font-size:12.5px;color:var(--muted);display:block;line-height:1.3;margin-top:1px}
+.opt:hover{border-color:var(--ink)}
+.opt[aria-pressed="true"]{background:var(--hl);border-color:var(--ink);color:var(--hl-ink);box-shadow:3px 3px 0 var(--ink)}
+.opt[aria-pressed="true"] svg,.opt[aria-pressed="true"] .sub{color:var(--hl-ink)}
+@media (max-width:1180px){.opts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:760px){.opts{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.opt{padding:9px}}
+@media (max-width:480px){.opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* work area */
+.work{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);gap:16px;align-items:start}
+@media (max-width:1000px){.work{grid-template-columns:minmax(0,1fr)}}
+.stagecard{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:14px;min-width:0}
+.stagehead h2{font-size:19px;line-height:1.3;font-weight:700}
+.stagehead p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.controls{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px;min-height:0}
+.controls:empty{display:none}
+.controls .lbl{font-size:13px;color:var(--muted);margin-right:2px}
+.stage{margin-top:10px;border-radius:12px;padding:12px;border:1px solid var(--line);min-height:300px;overflow:hidden;position:relative;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--paper-line) 1px,transparent 1px),linear-gradient(90deg,var(--paper-line) 1px,transparent 1px);
+  background-size:22px 22px}
+.stage svg{display:block;max-width:100%;height:auto}
+.empty{padding:70px 16px;text-align:center;color:var(--muted);background:var(--surface);border-radius:10px;border:1.5px dashed var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.legend:empty{display:none}
+.lg{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font-size:13px;font-weight:500}
+.lg i{width:12px;height:12px;border-radius:3px;flex:none;display:inline-block}
+.lg[aria-pressed="false"]{opacity:.5;text-decoration:line-through}
+.lg.on{border-color:var(--ink)}
+.lg.static{cursor:default}
+.hint{margin:10px 2px 0;color:var(--muted);font-size:13px}
+
+/* svg bits */
+.plotbg{fill:var(--surface)}
+.grid{stroke:var(--grid);stroke-width:1;stroke-dasharray:3 4}
+.axl{stroke:var(--muted);stroke-width:1.2}
+.axt{fill:var(--muted);font-size:12px;font-family:var(--font-body)}
+.axu{fill:var(--ink);font-size:12px;font-weight:700;font-family:var(--font-body)}
+.cross{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:4 3}
+.ser,.bar,.slice,.shrow,tr[data-s],.seg{transition:opacity .15s}
+.dim{opacity:.16}
+tr.dim{opacity:.35}
+.ln{fill:none;stroke-width:2.8;stroke-linejoin:round;stroke-linecap:round}
+.hit{fill:none;stroke:transparent;stroke-width:16;pointer-events:stroke}
+.pt{stroke:var(--surface);stroke-width:2;transform-box:fill-box;transform-origin:center;transition:transform .1s}
+.pt.hot{transform:scale(1.7)}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.growY{transform-box:fill-box;transform-origin:50% 100%;animation:gy .55s ease-out both}
+@keyframes gy{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.growX{transform-box:fill-box;transform-origin:0 50%;animation:gx .55s ease-out both}
+@keyframes gx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.bar.foc,.seg.foc{stroke:var(--ink);stroke-width:3}
+.vl{font-size:11.5px;font-weight:700;fill:var(--ink);font-family:var(--font-body)}
+.kp-ring{fill:none;stroke:var(--ink);stroke-width:2.5}
+.kp-lab{font-size:12px;font-weight:800;fill:var(--hl-ink);paint-order:stroke;stroke:var(--hl);stroke-width:6px;stroke-linejoin:round;font-family:var(--font-body)}
+.slice{cursor:pointer;transition:transform .15s,opacity .15s}
+.slice:hover{transform:translate(var(--dx),var(--dy))}
+.pl{font-size:12px;font-weight:800;pointer-events:none;font-family:var(--font-body)}
+.pie-center{font:800 15px var(--font-head);fill:var(--ink)}
+.pie-sub{font-size:11.5px;fill:var(--muted)}
+
+/* pie layouts */
+.pie-wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center}
+.pie-wrap>svg{flex:none}
+.shares{flex:1 1 230px;min-width:0;background:var(--surface);border-radius:10px;border:1px solid var(--line);padding:6px 10px;list-style:none;margin:0}
+.shrow{display:grid;grid-template-columns:14px 1fr auto;gap:2px 9px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.shrow:last-child{border-bottom:0}
+.shrow i{width:12px;height:12px;border-radius:3px}
+.shrow b{font-size:14px}
+.shrow .pc{font-weight:800;font-variant-numeric:tabular-nums}
+.shrow .bartrack{grid-column:2 / 4;height:6px;border-radius:3px;background:var(--surface2);overflow:hidden}
+.shrow .bartrack div{height:100%;border-radius:3px}
+.shrow small{grid-column:2 / 4;color:var(--muted);font-size:12px}
+.pies{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.pies figure{margin:0;text-align:center;background:var(--surface);border-radius:12px;padding:8px 6px 10px;border:1px solid var(--line)}
+.pies figcaption{font:700 14px var(--font-head)}
+
+/* table view */
+.tblwrap{overflow:auto;border-radius:10px;border:1px solid var(--line);background:var(--surface)}
+table.dt{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+table.dt th,table.dt td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+table.dt thead th{background:var(--surface2);font-weight:700}
+table.dt tbody th{text-align:left;font-weight:700}
+table.dt tbody tr:last-child>*{border-bottom:0}
+table.dt td{background:color-mix(in srgb,var(--accent) calc(var(--h,0) * 50%),transparent)}
+table.dt td.hi{background:var(--hl);color:var(--hl-ink);font-weight:800}
+table.dt td.foc{outline:3px solid var(--ink);outline-offset:-3px}
+table.dt .corner{text-align:left;color:var(--muted);font-weight:600}
+.sortbtn{background:none;border:0;padding:0;font-weight:700;display:inline-flex;gap:5px;align-items:center}
+.sortbtn:hover{text-decoration:underline}
+.sortbtn.sel{background:var(--hl);color:var(--hl-ink);padding:2px 7px;border-radius:6px}
+.up{color:var(--good);font-weight:700}.down{color:var(--bad);font-weight:700}
+.tp{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.tp>div:first-child{flex:1 1 320px;min-width:0}
+.tp>div:last-child{flex:0 1 270px;margin:0 auto;text-align:center}
+.tp .cap{font:700 14px var(--font-head);margin-bottom:4px}
+
+/* maps */
+.mapsvg{touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.maplab rect{fill:var(--ink)}
+.maplab text{fill:var(--bg);font-size:13px;font-weight:700;font-family:var(--font-body)}
+.changed-o{fill:none;stroke:var(--ink);stroke-width:4}
+.changed-i{fill:none;stroke:var(--hl);stroke-width:2}
+.handle-line{stroke:#fff;stroke-width:3}
+.handle-line2{stroke:var(--ink);stroke-width:5;opacity:.5}
+.handle-dot{fill:var(--hl);stroke:var(--ink);stroke-width:2.5;cursor:ew-resize}
+.maprow{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.maprow figure{margin:0}
+.maprow figcaption{font:700 14px var(--font-head);margin-bottom:6px}
+.edit-cursor{cursor:crosshair}
+
+/* process */
+.pnode{fill:var(--surface);stroke:var(--ink);stroke-width:1.6;cursor:pointer;transition:opacity .2s}
+.pgroup{cursor:pointer;transition:opacity .2s}
+.pgroup.active .pnode{fill:var(--hl);stroke-width:2.5}
+.pgroup.future{opacity:.3}
+.ptx{font-weight:700;font-size:14px;fill:var(--ink);font-family:var(--font-body)}
+.pd{font-size:12.5px;fill:var(--muted);font-family:var(--font-body)}
+.pgroup.active .ptx,.pgroup.active .pd{fill:var(--hl-ink)}
+.pb{fill:var(--ink)}
+.pbt{fill:var(--bg);font-size:12px;font-weight:800;font-family:var(--font-body)}
+.pgroup.active .pb{fill:var(--hl-ink)}.pgroup.active .pbt{fill:var(--hl)}
+.parrow{stroke:var(--muted);stroke-width:2;fill:none}
+.ahp{fill:var(--muted)}
+.cyc-title{font:800 16px var(--font-head);fill:var(--ink)}
+
+/* tooltip & toast */
+.tip{position:fixed;z-index:60;display:none;pointer-events:none;background:var(--ink);color:var(--bg);padding:8px 10px;border-radius:8px;font-size:12.5px;line-height:1.5;max-width:270px;box-shadow:0 10px 26px -10px rgba(0,0,0,.5)}
+.tip i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.tip .tm{opacity:.7}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-weight:600;font-size:13px;opacity:0;pointer-events:none;transition:.2s;z-index:70}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* panel */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;min-width:0}
+.tabs{display:flex;background:var(--surface2);border-bottom:1px solid var(--line)}
+.tab{flex:1;padding:12px 6px 10px;border:0;background:none;font-weight:700;font-size:14px;color:var(--muted);border-bottom:4px solid transparent}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);background:var(--surface);border-bottom-color:var(--hl)}
+.tabbody{padding:14px}
+.tabbody h3{font-size:15px;margin-bottom:6px}
+.field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;min-width:0}
+.field label{font-size:13px;font-weight:600}
+.field input,.field textarea,.field select,textarea.big{border:1.5px solid var(--line);background:var(--surface);border-radius:9px;padding:8px 10px;width:100%;min-width:0}
+.field input:focus,.field textarea:focus,textarea.big:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btnrow{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.gridwrap{overflow:auto;border:1.5px solid var(--line);border-radius:10px;max-height:340px}
+table.edit{border-collapse:collapse;width:100%;font-size:13px}
+table.edit td,table.edit th{border:1px solid var(--line);padding:0;min-width:70px;background:var(--surface)}
+table.edit th.corner{background:var(--surface2);min-width:60px}
+table.edit .cellbox{display:flex;align-items:center}
+table.edit input{width:100%;min-width:0;border:0;background:transparent;padding:8px;font-variant-numeric:tabular-nums}
+table.edit input:focus{outline:2px solid var(--accent);outline-offset:-2px;background:var(--surface2)}
+table.edit .hdr,table.edit .rname{font-weight:700}
+table.edit .rname{min-width:110px}
+table.edit .x{flex:none;border:0;background:none;color:var(--muted);padding:4px 7px;font-size:15px;line-height:1}
+table.edit .x:hover{color:var(--bad)}
+.samples{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.samples>span{font-size:13px;color:var(--muted)}
+details{border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;margin:10px 0}
+summary{cursor:pointer;font-weight:600;font-size:14px}
+details textarea{margin-top:8px;width:100%;border:1.5px solid var(--line);border-radius:8px;padding:8px;background:var(--surface);font-size:13px}
+.note{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:12px;background:var(--surface)}
+.draft{background:var(--surface2);border-left:5px solid var(--hl);padding:10px 12px;border-radius:0 10px 10px 0;margin:6px 0;line-height:1.6}
+.kf{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;width:100%;text-align:left;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);padding:9px 11px;margin-bottom:7px}
+.kf:hover,.kf[aria-pressed="true"]{background:var(--hl);color:var(--hl-ink);border-color:var(--ink)}
+.kf b{display:block;font-size:14px}
+.kf small{display:block;color:var(--muted);font-size:12.5px;line-height:1.4;margin-top:1px}
+.kf:hover small,.kf[aria-pressed="true"] small{color:inherit;opacity:.85}
+.badge{flex:none;font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;background:var(--surface2);color:var(--ink);border:1px solid var(--line)}
+.badge.up{background:color-mix(in srgb,var(--good) 18%,transparent)}
+.badge.down{background:color-mix(in srgb,var(--bad) 18%,transparent)}
+.mini{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.mini th,.mini td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}
+.mini th:first-child,.mini td:first-child{text-align:left}
+.mini i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.pal{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px}
+.pal i{width:14px;height:14px;border-radius:4px;border:1px solid rgba(20,33,61,.25)}
+.pal[aria-pressed="true"]{background:var(--hl);color:var(--hl-ink);border-color:var(--ink)}
+.pals{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.lang-group{margin-bottom:12px}
+.lang-group h4{font:700 14px var(--font-head);margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.phrase{border:1.5px solid var(--line);background:var(--surface);border-radius:8px;padding:4px 9px;font-size:13px}
+.phrase:hover{background:var(--hl);color:var(--hl-ink);border-color:var(--ink)}
+.prompt{background:var(--surface2);border-radius:10px;padding:10px 12px;font-size:14px;margin-bottom:10px}
+.timerrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.timer{font:800 24px var(--font-head);font-variant-numeric:tabular-nums;min-width:74px}
+.timer.low{color:var(--bad)}
+.wc{margin-left:auto;font-weight:700;font-size:14px}
+textarea.big{min-height:230px;resize:vertical;line-height:1.6;width:100%}
+.wcbar{height:6px;border-radius:3px;background:var(--surface2);overflow:hidden;margin:6px 0 12px}
+.wcbar div{height:100%;background:var(--hl);border-right:2px solid var(--ink);width:0;transition:width .2s}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{margin:5px 0}
+.checks label{display:flex;gap:8px;align-items:flex-start;font-size:14px;cursor:pointer}
+.checks input{margin-top:4px;accent-color:var(--accent)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:520px){.row2{grid-template-columns:1fr}.brand h1{font-size:24px}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.draw{stroke-dasharray:none;stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v20h20"/><path d="M8 18l5-6 4 3 6-8"/></svg>
+      </div>
+      <div>
+        <h1>Task 1 Studio</h1>
+        <p>Enter your own data, map or process. Choose one of 12 interactive views, find the key features, then write your report.</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="btn soft" data-act="theme" id="themeBtn">Dark mode</button>
+      <button class="btn soft" data-act="resetAll">Start over</button>
+    </div>
+  </header>
+
+  <section aria-label="Choose a view"><div class="opts" id="opts"></div></section>
+
+  <main class="work">
+    <section class="stagecard" aria-label="Interactive view">
+      <div class="stagehead"><h2 id="figTitle"></h2><p id="figSub"></p></div>
+      <div class="controls" id="controls"></div>
+      <div class="stage" id="stage"></div>
+      <div class="legend" id="legend"></div>
+      <p class="hint" id="hint"></p>
+    </section>
+    <aside class="panel" aria-label="Tools">
+      <div class="tabs" role="tablist" id="tabs">
+        <button class="tab" role="tab" data-act="tab" data-tab="data">Data</button>
+        <button class="tab" role="tab" data-act="tab" data-tab="insights">Insights</button>
+        <button class="tab" role="tab" data-act="tab" data-tab="language">Language</button>
+        <button class="tab" role="tab" data-act="tab" data-tab="write">Write</button>
+      </div>
+      <div class="tabbody" id="tabbody" role="tabpanel"></div>
+    </aside>
+  </main>
+</div>
+<div class="tip" id="tip" role="status"></div>
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* ============================================================
+   Constants, samples and state
+   ============================================================ */
+var PALETTE=['#d9482b','#1d6e8c','#e2a91a','#4c8c4a','#7a4ea0','#c0568b','#5a6b7a','#9a6b3a','#2a9d8f','#e76f51'];
+var COLS=16, ROWS=10;
+var KEY='task1studio.v1';
+
+var SAMPLES={
+  internet:{label:'Internet use',title:'Percentage of the population using the internet in four countries, 2000–2020',unit:'%',xLabel:'Year',
+    cats:['2000','2005','2010','2015','2020'],
+    series:[{name:'United Kingdom',values:[26,70,85,92,95]},{name:'Brazil',values:[3,21,41,59,74]},{name:'India',values:[1,2,7,18,43]},{name:'Vietnam',values:[0.3,13,31,52,70]}]},
+  spending:{label:'Household spending',title:'How an average household spent its income (% of total)',unit:'%',xLabel:'Year',
+    cats:['1990','2005','2020'],
+    series:[{name:'Housing',values:[28,31,36]},{name:'Food',values:[24,19,14]},{name:'Transport',values:[15,17,16]},{name:'Leisure',values:[12,16,20]},{name:'Other',values:[21,17,14]}]},
+  tourism:{label:'Tourism',title:'International visitors and tourism revenue, 2016–2022',unit:'',xLabel:'Year',
+    cats:['2016','2017','2018','2019','2020','2021','2022'],
+    series:[{name:'Visitors (millions)',values:[12.4,13.1,14.2,15,4.1,6.3,11.8]},{name:'Revenue ($ billion)',values:[8.2,8.9,9.8,10.5,3,4.4,8.1]}]},
+  exercise:{label:'Weekly exercise',title:'Average hours of exercise per week by age group and gender',unit:'hours',xLabel:'Age group',
+    cats:['16–24','25–34','35–44','45–54','55+'],
+    series:[{name:'Men',values:[6.5,5.2,3.8,3.1,2.9]},{name:'Women',values:[5.1,4.6,3.9,3.4,3.2]}]}
+};
+
+var TILES={
+  g:{name:'Grass',c:'#cfe6b4'},
+  t:{name:'Forest',c:'#9fca86'},
+  w:{name:'Lake',c:'#a9d6f0'},
+  h:{name:'Houses',c:'#dccfb4'},
+  r:{name:'Road',c:'#8f95a3'},
+  s:{name:'Shops',c:'#f1c98b'},
+  f:{name:'Farmland',c:'#e8d68f'},
+  o:{name:'Offices',c:'#bcc7e3'},
+  p:{name:'Park',c:'#b6e0a2'},
+  c:{name:'Car park',c:'#c4c7cf'}
+};
+var DEVELOPED='hsorc';
+
+var MAP_SAMPLE={
+  title:'Changes in Willow Village between 1995 and 2020',labelA:'1995',labelB:'2020',
+  a:['ttttggggffffffff','ttttggggffffffff','ttggggggffffffff','rrrrrrrrrrrrrrrr','gghhgghhggggwwww','gghhgghhggggwwww','ggggggggggggwwww','ggggggggggwwwwww','ttggggggggggwwww','ttttggggggggwwww'],
+  b:['ttttggggpppphhhh','ttttggggpppphhhh','ttggggggssssccch','rrrrrrrrrrrrrrrr','gghhgghhhhhhpppp','gghhgghhhhhhpppp','ggggggggggggwwpp','ggggggggggwwwwpp','ttggggooggggwwww','ttttggggggggwwww']
+};
+
+var PROCESS_SAMPLES={
+  water:{label:'Water cycle',mode:'cycle',title:'The natural water cycle',steps:[
+    {title:'Evaporation',detail:'The sun heats the oceans and lakes, turning water into vapour'},
+    {title:'Condensation',detail:'The vapour rises, cools and forms clouds'},
+    {title:'Precipitation',detail:'Water falls to the ground as rain, snow or hail'},
+    {title:'Run-off',detail:'Water flows over the land into streams and rivers'},
+    {title:'Collection',detail:'Rivers carry the water back to the sea'}]},
+  glass:{label:'Glass recycling',mode:'flow',title:'How glass bottles are recycled',steps:[
+    {title:'Collection',detail:'Used bottles are gathered from recycling points'},
+    {title:'Sorting',detail:'Bottles are separated by colour'},
+    {title:'Crushing',detail:'The glass is crushed into small pieces called cullet'},
+    {title:'Cleaning',detail:'Metal caps and paper labels are removed'},
+    {title:'Melting',detail:'The cullet is heated in a furnace at about 1,500°C'},
+    {title:'Moulding',detail:'The molten glass is shaped into new bottles'},
+    {title:'Cooling',detail:'The bottles are cooled slowly'},
+    {title:'Delivery',detail:'The new bottles are sent to food and drink producers'}]}
+};
+
+var MODES=[
+  {id:'line',group:'Line graph',sub:'Trend lines',kind:'data',icon:'<polyline points="4,24 15,13 25,19 36,7 44,11"/><polyline points="4,28 15,23 25,25 36,19 44,17" opacity=".5"/>',
+    hint:'Hover for exact values. Click a line to lock it. Click the legend to hide a series.'},
+  {id:'bar',group:'Bar chart',sub:'Grouped columns',kind:'data',icon:'<rect x="6" y="14" width="7" height="14"/><rect x="16" y="6" width="7" height="22"/><rect x="26" y="18" width="7" height="10"/><rect x="36" y="10" width="7" height="18"/>',
+    hint:'Hover a bar to see its rank within the group. Click to lock a series.'},
+  {id:'barh',group:'Bar chart',sub:'Horizontal bars',kind:'data',icon:'<rect x="6" y="5" width="22" height="6"/><rect x="6" y="13" width="34" height="6"/><rect x="6" y="21" width="14" height="6"/>',
+    hint:'Horizontal bars suit long category names. Hover for values.'},
+  {id:'stack',group:'Bar chart',sub:'Stacked columns',kind:'data',icon:'<rect x="8" y="14" width="10" height="14"/><rect x="8" y="6" width="10" height="8"/><rect x="26" y="10" width="10" height="18"/><rect x="26" y="4" width="10" height="6"/>',
+    hint:'Each column is a whole. Switch to % to compare shares.'},
+  {id:'pie',group:'Pie chart',sub:'Single pie',kind:'data',icon:'<circle cx="24" cy="16" r="12"/><path d="M24 16V4M24 16l10.4 6"/>',
+    hint:'Hover a slice. Use the arrows to compare one column with another.'},
+  {id:'pies',group:'Pie chart',sub:'Pies compared',kind:'data',icon:'<circle cx="14" cy="16" r="9"/><path d="M14 16V7M14 16l7.8 4.5"/><circle cx="35" cy="16" r="9"/><path d="M35 16V7M35 16l-6 6.9"/>',
+    hint:'Compare how each slice changes from one pie to the next.'},
+  {id:'table',group:'Table',sub:'Heatmap table',kind:'data',icon:'<rect x="5" y="4" width="38" height="24" rx="2"/><path d="M5 11h38M5 18h38M17 4v24M30 4v24"/>',
+    hint:'Click a column heading to sort. Try highlighting the highest values.'},
+  {id:'map',group:'Map',sub:'Before and after',kind:'map',icon:'<path d="M5 8l12-3 14 4 12-3v20l-12 3-14-4-12 3z"/><path d="M17 5v20M31 9v20"/>',
+    hint:'Drag the handle to compare. “Changes” outlines every difference. “Edit” lets you paint your own map.'},
+  {id:'flow',group:'Process diagram',sub:'Step by step',kind:'process',icon:'<rect x="3" y="11" width="11" height="10" rx="2"/><rect x="18.5" y="11" width="11" height="10" rx="2"/><rect x="34" y="11" width="11" height="10" rx="2"/><path d="M14 16h4M29.5 16h4"/>',
+    hint:'Step through the process or click any box.'},
+  {id:'cycle',group:'Process diagram',sub:'Cycle',kind:'process',icon:'<path d="M35 8a12 12 0 1 0 1 12"/><path d="M37 3v6h-6"/>',
+    hint:'A cycle has no fixed start or end. Click a stage to read its detail in the centre.'},
+  {id:'mixed',group:'Mixed chart',sub:'Bars + line',kind:'data',icon:'<rect x="6" y="16" width="7" height="12"/><rect x="17" y="10" width="7" height="18"/><rect x="28" y="19" width="7" height="9"/><polyline points="9,9 21,5 32,12 43,6"/>',
+    hint:'Bars use the left axis. Lines use the right axis. Choose which series is a line.'},
+  {id:'tablepie',group:'Mixed chart',sub:'Table + pie',kind:'data',icon:'<rect x="3" y="5" width="24" height="22" rx="2"/><path d="M3 12h24M3 19h24M13 5v22"/><circle cx="37" cy="16" r="8"/><path d="M37 16V8M37 16l6 5"/>',
+    hint:'Click a column heading to redraw the pie for that column.'}
+];
+var MODE={};MODES.forEach(function(m){MODE[m.id]=m;});
+
+function clone(o){return JSON.parse(JSON.stringify(o));}
+function gridFrom(rows){return rows.map(function(r){return r.split('');});}
+function gridToRows(g){return g.map(function(r){return r.join('');});}
+
+function defaultState(){
+  var last=SAMPLES.internet.series.length-1;
+  return {
+    mode:'line',tab:'data',data:clone(SAMPLES.internet),hidden:new Set(),hover:null,lock:null,focus:null,
+    pieCat:0,keyPts:false,showVals:false,stackPct:false,lineSeries:[last],hiMode:'none',heat:true,delta:false,sort:null,
+    mapView:'slider',mapSplit:0.5,mapEdit:'b',brush:'h',mapFocus:null,
+    map:{title:MAP_SAMPLE.title,labelA:MAP_SAMPLE.labelA,labelB:MAP_SAMPLE.labelB,a:gridFrom(MAP_SAMPLE.a),b:gridFrom(MAP_SAMPLE.b)},
+    process:clone(PROCESS_SAMPLES.water),pStep:-1,playing:false,
+    writing:'',checks:{},animate:true,
+    timer:{left:1200,running:false}
+  };
+}
+var state=defaultState();
+
+/* ============================================================
+   Helpers
+   ============================================================ */
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function clamp(v,a,b){return Math.min(b,Math.max(a,v));}
+function isNum(v){return typeof v==='number'&&isFinite(v);}
+function fmt(v){if(!isNum(v))return '–';var r=Math.round(v*100)/100;return r.toLocaleString('en-US',{maximumFractionDigits:2});}
+function trunc(s,n){s=String(s);return s.length>n?s.slice(0,n-1)+'…':s;}
+function lcFirst(s){return s&&s.length>1&&s[1]===s[1].toLowerCase()?s[0].toLowerCase()+s.slice(1):s;}
+function joinList(a){if(a.length<=1)return a.join('');return a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function colorOf(i){return PALETTE[i%PALETTE.length];}
+function lum(hex){var n=parseInt(hex.slice(1),16);return (0.299*(n>>16&255)+0.587*(n>>8&255)+0.114*(n&255))/255;}
+function textOn(hex){return lum(hex)>0.6?'#14213d':'#ffffff';}
+function toNum(s){if(s==null)return null;var t=String(s).replace(/[,\s%$€£]/g,'');if(t===''||t==='-'||t==='–')return null;var n=parseFloat(t);return isFinite(n)?n:null;}
+function catLabel(j){return String(state.data.cats[j]==null?'':state.data.cats[j]);}
+function sName(i){var s=state.data.series[i];return (s&&s.name)||('Series '+(i+1));}
+function U(v){var u=(state.data.unit||'').trim();if(!isNum(v))return '–';return u==='%'?fmt(v)+'%':(u?fmt(v)+' '+u:fmt(v));}
+function visSeries(){
+  return state.data.series.map(function(s,i){return {i:i,name:sName(i),v:s.values.map(function(x){return isNum(x)?x:NaN;}),c:colorOf(i)};})
+    .filter(function(s){return !state.hidden.has(s.i);});
+}
+function empty(m){return '<div class="empty">'+esc(m||'Nothing to show yet. Add data in the Data tab.')+'</div>';}
+
+function niceNum(x,round){
+  var exp=Math.floor(Math.log10(x)),f=x/Math.pow(10,exp),nf;
+  if(round){nf=f<1.5?1:f<3?2:f<7?5:10;}else{nf=f<=1?1:f<=2?2:f<=5?5:10;}
+  return nf*Math.pow(10,exp);
+}
+function niceScale(min,max,ticks){
+  ticks=ticks||5;
+  if(!isFinite(min)||!isFinite(max)){min=0;max=1;}
+  if(min===max){if(min===0){max=1;}else{max=min>0?min*1.2:0;min=min>0?0:min*1.2;}}
+  var range=niceNum(max-min,false),step=niceNum(range/(ticks-1),true);
+  var nmin=Math.floor(min/step+1e-9)*step,nmax=Math.ceil(max/step-1e-9)*step,arr=[];
+  for(var v=nmin;v<=nmax+step/2;v+=step)arr.push(+v.toFixed(10));
+  return {min:nmin,max:nmax,step:step,ticks:arr};
+}
+function wrapText(text,maxChars,maxLines){
+  var words=String(text).split(/\s+/).filter(Boolean),lines=[],cur='';
+  words.forEach(function(w){
+    if(!cur){cur=w;}else if((cur+' '+w).length<=maxChars){cur+=' '+w;}else{lines.push(cur);cur=w;}
+  });
+  if(cur)lines.push(cur);
+  if(lines.length>maxLines){lines=lines.slice(0,maxLines);lines[maxLines-1]=trunc(lines[maxLines-1]+'…',maxChars);}
+  return lines;
+}
+function fracPhrase(p){
+  var T=[[100,'the whole'],[75,'three quarters'],[66.7,'two thirds'],[50,'half'],[33.3,'a third'],[25,'a quarter'],[20,'one in five'],[10,'one in ten'],[5,'one in twenty']];
+  var best=null,bd=1e9;
+  T.forEach(function(t){var d=Math.abs(p-t[0]);if(d<bd){bd=d;best=t;}});
+  if(bd<=1.2)return 'almost exactly '+best[1];
+  if(bd<=4.5){return (p>best[0]?'just over ':'just under ')+best[1];}
+  if(p>50)return 'the majority';
+  if(p<5)return 'a very small minority';
+  if(p<15)return 'a small minority';
+  return 'a minority';
+}
+function slug(){return state.mode;}
+
+/* tooltip */
+var tips=[];
+function tipI(h){tips.push(h);return tips.length-1;}
+var tipEl=null,toastEl=null,toastT=0;
+function showTip(html,e){
+  tipEl.innerHTML=html;tipEl.style.display='block';
+  var r=tipEl.getBoundingClientRect(),pad=14,x=e.clientX+pad,y=e.clientY+pad;
+  if(x+r.width>window.innerWidth-8)x=e.clientX-r.width-pad;
+  if(y+r.height>window.innerHeight-8)y=e.clientY-r.height-pad;
+  tipEl.style.left=Math.max(8,x)+'px';tipEl.style.top=Math.max(8,y)+'px';
+}
+function hideTip(){tipEl.style.display='none';}
+function toast(m){toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('show');},1400);}
+function copyText(t){
+  var done=function(){toast('Copied');};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallbackCopy(t);done();});}
+  else{fallbackCopy(t);done();}
+}
+function fallbackCopy(t){
+  var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();
+}
+
+/* persistence */
+var saveT=0;
+function save(){
+  clearTimeout(saveT);
+  saveT=setTimeout(function(){
+    try{
+      localStorage.setItem(KEY,JSON.stringify({mode:state.mode,data:state.data,
+        map:{title:state.map.title,labelA:state.map.labelA,labelB:state.map.labelB,a:gridToRows(state.map.a),b:gridToRows(state.map.b)},
+        process:state.process,writing:state.writing,theme:document.documentElement.getAttribute('data-theme')||''}));
+    }catch(e){}
+  },250);
+}
+function load(){
+  try{
+    var raw=localStorage.getItem(KEY);if(!raw)return;
+    var o=JSON.parse(raw);
+    if(o.data&&Array.isArray(o.data.cats)&&Array.isArray(o.data.series)&&o.data.series.every(function(s){return Array.isArray(s.values);})){
+      state.data=o.data;normData();
+    }
+    if(o.map&&Array.isArray(o.map.a)&&Array.isArray(o.map.b)&&o.map.a.length===ROWS&&o.map.b.length===ROWS){
+      state.map={title:o.map.title||'',labelA:o.map.labelA||'Before',labelB:o.map.labelB||'After',a:gridFrom(o.map.a),b:gridFrom(o.map.b)};
+    }
+    if(o.process&&Array.isArray(o.process.steps)){state.process=o.process;}
+    if(typeof o.writing==='string')state.writing=o.writing;
+    if(o.mode&&MODE[o.mode])state.mode=o.mode;
+    if(o.theme){document.documentElement.setAttribute('data-theme',o.theme);}
+    state.lineSeries=state.data.series.length>1?[state.data.series.length-1]:[];
+  }catch(e){}
+}
+function normData(){
+  var d=state.data,n=d.cats.length;
+  d.cats=d.cats.map(String);
+  d.series.forEach(function(s){
+    s.values=s.values.slice(0,n);
+    while(s.values.length<n)s.values.push(null);
+    s.values=s.values.map(function(v){return isNum(v)?v:null;});
+  });
+  state.pieCat=clamp(state.pieCat,0,Math.max(0,n-1));
+  state.hidden=new Set(Array.from(state.hidden).filter(function(i){return i<d.series.length;}));
+  state.lineSeries=state.lineSeries.filter(function(i){return i<d.series.length;});
+  if(state.lock!=null&&state.lock>=d.series.length)state.lock=null;
+  state.focus=null;
+}
+
+/* ============================================================
+   Shared chart pieces
+   ============================================================ */
+function scaleY(sc,m,H){return function(v){return m.t+(H-m.t-m.b)*(1-(v-sc.min)/(sc.max-sc.min));};}
+function yFrame(W,H,m,sc,leftUnit){
+  var y=scaleY(sc,m,H),o='<rect class="plotbg" x="'+m.l+'" y="'+m.t+'" width="'+(W-m.l-m.r)+'" height="'+(H-m.t-m.b)+'" rx="4"/>';
+  sc.ticks.forEach(function(v){
+    var yy=y(v);
+    o+='<line class="grid" x1="'+m.l+'" x2="'+(W-m.r)+'" y1="'+yy+'" y2="'+yy+'"/><text class="axt" x="'+(m.l-8)+'" y="'+(yy+4)+'" text-anchor="end">'+fmt(v)+'</text>';
+  });
+  o+='<line class="axl" x1="'+m.l+'" x2="'+(W-m.r)+'" y1="'+y(Math.max(sc.min,0))+'" y2="'+y(Math.max(sc.min,0))+'"/>';
+  if(leftUnit)o+='<text class="axu" x="'+m.l+'" y="'+(m.t-12)+'">'+esc(leftUnit)+'</text>';
+  return o;
+}
+function xLabels(pos,labels,y,avail){
+  var maxLen=Math.max(1,Math.max.apply(null,labels.map(function(l){return Math.min(l.length,14);})));
+  var lw=maxLen*6.6+14,step=Math.max(1,Math.ceil(lw/(avail/Math.max(labels.length,1))));
+  return labels.map(function(l,i){return i%step?'':'<text class="axt" x="'+pos[i]+'" y="'+y+'" text-anchor="middle">'+esc(trunc(l,14))+'</text>';}).join('');
+}
+function xTitle(W,H,m,txt){return txt?'<text class="axu" x="'+(m.l+(W-m.l-m.r)/2)+'" y="'+(H-10)+'" text-anchor="middle">'+esc(txt)+'</text>':'';}
+function leftMargin(sc){return Math.max.apply(null,sc.ticks.map(function(t){return fmt(t).length;}))*7+20;}
+function isFocus(s,i){return state.focus&&state.focus.s===s&&(i==null||state.focus.i===i);}
+function chartH(W){return clamp(Math.round(W*0.6),300,440);}
+
+/* ============================================================
+   Renderers: line
+   ============================================================ */
+var postRender=null;
+
+function renderLine(W){
+  var H=chartH(W),d=state.data,vs=visSeries(),n=d.cats.length;
+  if(!n||!vs.length)return empty();
+  var vals=[].concat.apply([],vs.map(function(s){return s.v;})).filter(isNum);
+  if(!vals.length)return empty('Add some numbers in the Data tab.');
+  var lo=Math.min.apply(null,vals),hi=Math.max.apply(null,vals);
+  var zero=lo<=0||lo<0.6*hi,sc=niceScale(zero?Math.min(0,lo):lo,hi);
+  var m={l:leftMargin(sc),r:22,t:d.unit?32:16,b:d.xLabel?60:42};
+  var iw=W-m.l-m.r,pad=Math.min(26,iw/(n*2)),y=scaleY(sc,m,H);
+  var xs=d.cats.map(function(_,i){return n===1?m.l+iw/2:m.l+pad+i*(iw-2*pad)/(n-1);});
+  var o='<svg class="line" viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Line graph: '+esc(d.title)+'">';
+  o+=yFrame(W,H,m,sc,d.unit);
+  o+=xLabels(xs,d.cats.map(String),H-m.b+20,iw)+xTitle(W,H,m,d.xLabel);
+  var anim=state.animate;
+  vs.forEach(function(s){
+    var pts=s.v.map(function(v,i){return isNum(v)?[xs[i],y(v)]:null;});
+    var p='',pen=false;
+    pts.forEach(function(q){if(!q){pen=false;return;}p+=(pen?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1);pen=true;});
+    o+='<g class="ser" data-s="'+s.i+'"><path class="hit" d="'+p+'"/><path class="ln'+(anim?' draw':'')+'" pathLength="1" d="'+p+'" stroke="'+s.c+'"/>';
+    pts.forEach(function(q,i){
+      if(!q)return;
+      o+='<circle class="pt" data-i="'+i+'" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="'+(n>14?2.5:4.2)+'" fill="'+s.c+'"/>';
+      if(state.showVals&&n*vs.length<=40){o+='<text class="vl" x="'+q[0].toFixed(1)+'" y="'+(q[1]-9).toFixed(1)+'" text-anchor="middle">'+fmt(s.v[i])+'</text>';}
+    });
+    o+='</g>';
+  });
+  if(state.keyPts){
+    var mx=null,mn=null;
+    vs.forEach(function(s){s.v.forEach(function(v,i){
+      if(!isNum(v))return;
+      if(!mx||v>mx.v)mx={v:v,i:i,s:s};
+      if(!mn||v<mn.v)mn={v:v,i:i,s:s};
+    });});
+    [[mx,'Highest'],[mn,'Lowest']].forEach(function(k){
+      if(!k[0])return;
+      var cx=xs[k[0].i],cy=y(k[0].v),ty=k[1]==='Highest'?cy-16:cy+24;
+      o+='<circle class="kp-ring" cx="'+cx+'" cy="'+cy+'" r="9"/><text class="kp-lab" x="'+clamp(cx,50,W-50)+'" y="'+ty+'" text-anchor="middle">'+k[1]+': '+U(k[0].v)+'</text>';
+    });
+  }
+  if(state.focus){
+    var fs=state.focus,sv=state.data.series[fs.s];
+    if(sv&&isNum(sv.values[fs.i])&&!state.hidden.has(fs.s)){
+      var fx=xs[fs.i],fy=y(sv.values[fs.i]);
+      o+='<line class="cross" x1="'+fx+'" x2="'+fx+'" y1="'+fy+'" y2="'+y(Math.max(sc.min,0))+'"/><circle cx="'+fx+'" cy="'+fy+'" r="12" fill="var(--hl)" stroke="var(--ink)" stroke-width="2.5" opacity=".9"/><circle cx="'+fx+'" cy="'+fy+'" r="4.5" fill="'+colorOf(fs.s)+'"/>';
+    }
+  }
+  o+='<line id="cross" class="cross" y1="'+m.t+'" y2="'+(H-m.b)+'" x1="0" x2="0" style="display:none"/></svg>';
+  postRender=function(){
+    var svg=$('svg.line',$('#stage')),cross=$('#cross',svg);if(!svg)return;
+    var hotI=-1;
+    svg.addEventListener('pointermove',function(e){
+      var r=svg.getBoundingClientRect(),px=(e.clientX-r.left)*(W/r.width);
+      var best=0,bd=1e9;xs.forEach(function(x,i){var dd=Math.abs(x-px);if(dd<bd){bd=dd;best=i;}});
+      if(px<m.l-10||px>W-m.r+10){cross.style.display='none';hideTip();return;}
+      cross.setAttribute('x1',xs[best]);cross.setAttribute('x2',xs[best]);cross.style.display='';
+      if(hotI!==best){hotI=best;$$('circle.pt',svg).forEach(function(c){c.classList.toggle('hot',+c.getAttribute('data-i')===best);});}
+      var rows=vs.filter(function(s){return isNum(s.v[best]);}).sort(function(a,b){return b.v[best]-a.v[best];});
+      showTip('<b>'+esc(d.cats[best])+'</b>'+rows.map(function(s){return '<br><i style="background:'+s.c+'"></i>'+esc(s.name)+': <b>'+U(s.v[best])+'</b>';}).join(''),e);
+    });
+    svg.addEventListener('pointerleave',function(){cross.style.display='none';hotI=-1;$$('circle.pt.hot',svg).forEach(function(c){c.classList.remove('hot');});hideTip();});
+  };
+  return o;
+}
+
+/* ============================================================
+   Renderers: bars (grouped vertical / horizontal) and stacked
+   ============================================================ */
+function barTip(vs,si,ci){
+  var rows=vs.map(function(x){return {i:x.i,v:x.v[ci]};}).filter(function(x){return isNum(x.v);}).sort(function(a,b){return b.v-a.v;});
+  var rk=rows.findIndex(function(x){return x.i===si;})+1,v=state.data.series[si].values[ci];
+  return '<b>'+esc(catLabel(ci))+'</b><br><i style="background:'+colorOf(si)+'"></i>'+esc(sName(si))+': <b>'+U(v)+'</b><br><span class="tm">Rank '+rk+' of '+rows.length+' in this group</span>';
+}
+function renderBars(W,horiz){
+  var H=chartH(W),d=state.data,vs=visSeries(),n=d.cats.length,k=vs.length;
+  if(!n||!k)return empty();
+  var vals=[].concat.apply([],vs.map(function(s){return s.v;})).filter(isNum);
+  if(!vals.length)return empty('Add some numbers in the Data tab.');
+  var sc=niceScale(Math.min(0,Math.min.apply(null,vals)),Math.max(0,Math.max.apply(null,vals)));
+  var labs=d.cats.map(String),o,anim=state.animate;
+  if(!horiz){
+    var m={l:leftMargin(sc),r:16,t:d.unit?32:16,b:d.xLabel?60:42},iw=W-m.l-m.r,ih=H-m.t-m.b,y=scaleY(sc,m,H);
+    var gw=iw/n,bw=clamp((gw*0.82)/k-2,6,46),tot=k*bw+(k-1)*2,y0=y(0);
+    o='<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Bar chart: '+esc(d.title)+'">'+yFrame(W,H,m,sc,d.unit);
+    var cx=labs.map(function(_,i){return m.l+gw*i+gw/2;});
+    o+=xLabels(cx,labs,H-m.b+20,iw)+xTitle(W,H,m,d.xLabel);
+    labs.forEach(function(_,ci){
+      var sx=cx[ci]-tot/2;
+      vs.forEach(function(s,j){
+        var v=s.v[ci];if(!isNum(v))return;
+        var yy=y(v),x=sx+j*(bw+2),top=Math.min(yy,y0),h=Math.max(1,Math.abs(yy-y0));
+        o+='<g class="ser" data-s="'+s.i+'"><rect class="bar'+(anim?' growY':'')+(isFocus(s.i,ci)?' foc':'')+'" data-t="'+tipI(barTip(vs,s.i,ci))+'" x="'+x.toFixed(1)+'" y="'+top.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="3" fill="'+s.c+'"/>';
+        if(state.showVals){
+          if(bw>=24)o+='<text class="vl" x="'+(x+bw/2).toFixed(1)+'" y="'+(top-5).toFixed(1)+'" text-anchor="middle">'+fmt(v)+'</text>';
+          else o+='<text class="vl" transform="rotate(-90 '+(x+bw/2).toFixed(1)+' '+(top-5).toFixed(1)+')" x="'+(x+bw/2).toFixed(1)+'" y="'+(top-5).toFixed(1)+'" text-anchor="start" dy="4">'+fmt(v)+'</text>';
+        }
+        o+='</g>';
+      });
+    });
+    return o+'</svg>';
+  }
+  var maxLab=Math.min(22,Math.max.apply(null,labs.map(function(l){return l.length;})));
+  var mh={l:clamp(maxLab*6.8+18,60,170),r:30,t:d.unit?32:14,b:d.xLabel?60:40};
+  var hH=Math.max(H,n*(k*20+16)+mh.t+mh.b);
+  var iw2=W-mh.l-mh.r,ih2=hH-mh.t-mh.b,x=function(v){return mh.l+iw2*((v-sc.min)/(sc.max-sc.min));};
+  o='<svg viewBox="0 0 '+W+' '+hH+'" width="'+W+'" height="'+hH+'" role="img" aria-label="Horizontal bar chart: '+esc(d.title)+'"><rect class="plotbg" x="'+mh.l+'" y="'+mh.t+'" width="'+iw2+'" height="'+ih2+'" rx="4"/>';
+  sc.ticks.forEach(function(v){var xx=x(v);o+='<line class="grid" x1="'+xx+'" x2="'+xx+'" y1="'+mh.t+'" y2="'+(hH-mh.b)+'"/><text class="axt" x="'+xx+'" y="'+(hH-mh.b+18)+'" text-anchor="middle">'+fmt(v)+'</text>';});
+  o+='<line class="axl" x1="'+x(Math.max(sc.min,0))+'" x2="'+x(Math.max(sc.min,0))+'" y1="'+mh.t+'" y2="'+(hH-mh.b)+'"/>';
+  if(d.unit)o+='<text class="axu" x="'+mh.l+'" y="'+(mh.t-12)+'">'+esc(d.unit)+'</text>';
+  var gh=ih2/n,bh=clamp((gh*0.8)/k-2,6,28),tot2=k*bh+(k-1)*2,x0=x(Math.max(sc.min,0));
+  labs.forEach(function(l,ci){
+    var cy=mh.t+gh*ci+gh/2,sy=cy-tot2/2;
+    o+='<text class="axt" x="'+(mh.l-8)+'" y="'+(cy+4)+'" text-anchor="end">'+esc(trunc(l,22))+'</text>';
+    vs.forEach(function(s,j){
+      var v=s.v[ci];if(!isNum(v))return;
+      var xx=x(v),left=Math.min(xx,x0),w=Math.max(1,Math.abs(xx-x0)),yy=sy+j*(bh+2);
+      o+='<g class="ser" data-s="'+s.i+'"><rect class="bar'+(anim?' growX':'')+(isFocus(s.i,ci)?' foc':'')+'" data-t="'+tipI(barTip(vs,s.i,ci))+'" x="'+left.toFixed(1)+'" y="'+yy.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+bh.toFixed(1)+'" rx="3" fill="'+s.c+'"/>';
+      if(state.showVals)o+='<text class="vl" x="'+(left+w+5).toFixed(1)+'" y="'+(yy+bh/2+4).toFixed(1)+'">'+fmt(v)+'</text>';
+      o+='</g>';
+    });
+  });
+  if(d.xLabel)o+='<text class="axu" x="'+(mh.l+iw2/2)+'" y="'+(hH-10)+'" text-anchor="middle">'+esc(d.xLabel)+'</text>';
+  return o+'</svg>';
+}
+function renderStack(W){
+  var H=chartH(W),d=state.data,vs=visSeries(),n=d.cats.length;
+  if(!n||!vs.length)return empty();
+  var totals=d.cats.map(function(_,ci){return vs.reduce(function(a,s){return a+(isNum(s.v[ci])?Math.max(0,s.v[ci]):0);},0);});
+  var maxT=Math.max.apply(null,totals);if(!(maxT>0))return empty('Add some positive numbers in the Data tab.');
+  var pct=state.stackPct,sc=pct?{min:0,max:100,ticks:[0,25,50,75,100]}:niceScale(0,maxT);
+  var m={l:leftMargin(sc),r:16,t:(d.unit||pct)?32:16,b:d.xLabel?60:42},iw=W-m.l-m.r,y=scaleY(sc,m,H),gw=iw/n,bw=clamp(gw*0.6,16,90),labs=d.cats.map(String);
+  var cx=labs.map(function(_,i){return m.l+gw*i+gw/2;});
+  var o='<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Stacked bar chart: '+esc(d.title)+'">'+yFrame(W,H,m,sc,pct?'% of total':d.unit);
+  o+=xLabels(cx,labs,H-m.b+20,iw)+xTitle(W,H,m,d.xLabel);
+  labs.forEach(function(_,ci){
+    var acc=0,T=totals[ci]||1;
+    vs.forEach(function(s){
+      var v=isNum(s.v[ci])?Math.max(0,s.v[ci]):0;if(!v)return;
+      var a=pct?acc/T*100:acc,b=pct?(acc+v)/T*100:acc+v;acc+=v;
+      var y1=y(b),y2=y(a),h=y2-y1,share=v/T*100;
+      var tp='<b>'+esc(labs[ci])+'</b><br><i style="background:'+s.c+'"></i>'+esc(s.name)+': <b>'+U(v)+'</b><br><span class="tm">'+fmt(share)+'% of the total ('+U(T)+')</span>';
+      o+='<g class="ser" data-s="'+s.i+'"><rect class="seg'+(state.animate?' growY':'')+(isFocus(s.i,ci)?' foc':'')+'" data-t="'+tipI(tp)+'" x="'+(cx[ci]-bw/2).toFixed(1)+'" y="'+y1.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+Math.max(0.5,h).toFixed(1)+'" fill="'+s.c+'" stroke="var(--surface)" stroke-width="1.5"/>';
+      if(h>=17&&bw>=26)o+='<text class="pl" x="'+cx[ci]+'" y="'+(y1+h/2+4).toFixed(1)+'" text-anchor="middle" fill="'+textOn(s.c)+'">'+(pct?fmt(Math.round(share*10)/10)+'%':fmt(v))+'</text>';
+      o+='</g>';
+    });
+    if(!pct&&state.showVals)o+='<text class="vl" x="'+cx[ci]+'" y="'+(y(totals[ci])-6)+'" text-anchor="middle">Total '+fmt(totals[ci])+'</text>';
+  });
+  return o+'</svg>';
+}
+
+/* ============================================================
+   Renderers: pies
+   ============================================================ */
+function arcPath(cx,cy,r,a0,a1,ir){
+  var lg=(a1-a0)>Math.PI?1:0;
+  function p(rad,a){return [cx+rad*Math.cos(a),cy+rad*Math.sin(a)];}
+  var A=p(r,a0),B=p(r,a1);
+  if(!ir)return 'M'+cx+','+cy+'L'+A[0]+','+A[1]+'A'+r+','+r+' 0 '+lg+' 1 '+B[0]+','+B[1]+'Z';
+  var C=p(ir,a1),D=p(ir,a0);
+  return 'M'+A[0]+','+A[1]+'A'+r+','+r+' 0 '+lg+' 1 '+B[0]+','+B[1]+'L'+C[0]+','+C[1]+'A'+ir+','+ir+' 0 '+lg+' 0 '+D[0]+','+D[1]+'Z';
+}
+function sharesAt(ci){
+  var vs=visSeries().map(function(s){return {i:s.i,name:s.name,v:Math.max(0,isNum(s.v[ci])?s.v[ci]:0)};});
+  var tot=vs.reduce(function(a,b){return a+b.v;},0);
+  return {tot:tot,items:vs.filter(function(x){return x.v>0;}).map(function(x){x.p=x.v/tot*100;return x;})};
+}
+function pieSVG(ci,size,innerRatio,center,prevCi){
+  var S=sharesAt(ci);if(!S.tot)return '';
+  var cx=size/2,cy=size/2,r=size/2-14,ir=innerRatio?r*innerRatio:0,a=-Math.PI/2;
+  var prev=prevCi!=null?sharesAt(prevCi):null;
+  var o='<svg viewBox="0 0 '+size+' '+size+'" width="'+size+'" height="'+size+'" role="img" aria-label="Pie chart for '+esc(catLabel(ci))+'">';
+  S.items.forEach(function(it){
+    var da=it.v/S.tot*Math.PI*2,a0=a,a1=a+Math.min(da,Math.PI*2-0.0001),mid=(a0+a1)/2;a+=da;
+    var tp='<b>'+esc(catLabel(ci))+'</b><br><i style="background:'+colorOf(it.i)+'"></i>'+esc(it.name)+': <b>'+U(it.v)+'</b><br><span class="tm">'+fmt(Math.round(it.p*10)/10)+'% of the whole – '+fracPhrase(it.p)+'</span>';
+    if(prev){var pv=prev.items.filter(function(q){return q.i===it.i;})[0],pp=pv?it.p-pv.p:it.p;tp+='<br><span class="tm">'+(pp>=0?'+':'')+fmt(Math.round(pp*10)/10)+' percentage points vs '+esc(catLabel(prevCi))+'</span>';}
+    o+='<path class="slice" data-s="'+it.i+'" data-t="'+tipI(tp)+'" style="--dx:'+(Math.cos(mid)*5).toFixed(1)+'px;--dy:'+(Math.sin(mid)*5).toFixed(1)+'px" d="'+arcPath(cx,cy,r,a0,a1,ir)+'" fill="'+colorOf(it.i)+'" stroke="var(--surface)" stroke-width="2"/>';
+    if(it.p>=6){
+      var rr=ir?(r+ir)/2:r*0.64;
+      o+='<text class="pl" x="'+(cx+rr*Math.cos(mid)).toFixed(1)+'" y="'+(cy+rr*Math.sin(mid)+4).toFixed(1)+'" text-anchor="middle" fill="'+textOn(colorOf(it.i))+'">'+fmt(Math.round(it.p))+'%</text>';
+    }
+  });
+  if(center)o+='<text class="pie-center" x="'+cx+'" y="'+(cy+5)+'" text-anchor="middle">'+esc(trunc(center,12))+'</text>';
+  return o+'</svg>';
+}
+function renderPie(W){
+  var d=state.data,n=d.cats.length;if(!n)return empty();
+  var ci=clamp(state.pieCat,0,n-1),S=sharesAt(ci);if(!S.tot)return empty('Make sure at least one visible series has a positive number in this column.');
+  var size=clamp(Math.min(W-8,380),240,380);
+  var list=S.items.slice().sort(function(a,b){return b.p-a.p;});
+  var o='<div class="pie-wrap">'+pieSVG(ci,size,0,null,null)+'<ul class="shares" aria-label="Shares">';
+  list.forEach(function(it){
+    o+='<li class="shrow" data-s="'+it.i+'"><i style="background:'+colorOf(it.i)+'"></i><b>'+esc(it.name)+'</b><span class="pc">'+fmt(Math.round(it.p*10)/10)+'%</span><div class="bartrack"><div style="width:'+it.p+'%;background:'+colorOf(it.i)+'"></div></div><small>'+U(it.v)+' · '+fracPhrase(it.p)+'</small></li>';
+  });
+  return o+'</ul></div>';
+}
+function renderPies(W){
+  var d=state.data,n=d.cats.length;if(!n)return empty();
+  var count=Math.min(n,6),cols=Math.max(1,Math.min(count,Math.floor(W/200)));
+  var size=clamp(Math.floor((W-14*(cols-1)-20*cols)/cols),150,270),o='<div class="pies">';
+  for(var ci=0;ci<count;ci++){
+    var svg=pieSVG(ci,size,0.52,String(d.cats[ci]),ci>0?ci-1:null);
+    o+='<figure>'+(svg||'<div class="empty" style="padding:40px 10px">No data</div>')+'<figcaption>'+esc(catLabel(ci))+'</figcaption></figure>';
+  }
+  o+='</div>';
+  if(n>6)o+='<p class="note">Showing the first 6 columns.</p>';
+  return o;
+}
+
+/* ============================================================
+   Renderers: table, table + pie
+   ============================================================ */
+function tableModel(){
+  var d=state.data,rows=d.series.map(function(s,i){return {i:i,name:sName(i),v:s.values.map(function(x){return isNum(x)?x:NaN;})};}).filter(function(r){return !state.hidden.has(r.i);});
+  if(state.sort){
+    var c=state.sort.col,dir=state.sort.dir;
+    rows.sort(function(a,b){var x=isNum(a.v[c])?a.v[c]:-Infinity,y=isNum(b.v[c])?b.v[c]:-Infinity;return dir==='desc'?y-x:x-y;});
+  }
+  return rows;
+}
+function sortBtn(j,label){
+  var sel=state.sort&&state.sort.col===j;
+  return '<button class="sortbtn'+(sel?' sel':'')+'" data-act="sort" data-c="'+j+'" title="Sort by this column">'+esc(label)+(sel?(state.sort.dir==='desc'?' ↓':' ↑'):'')+'</button>';
+}
+function renderTable(W){
+  var d=state.data,n=d.cats.length,rows=tableModel();if(!n||!rows.length)return empty();
+  var all=[].concat.apply([],rows.map(function(r){return r.v;})).filter(isNum),mx=Math.max.apply(null,all),mn=Math.min.apply(null,all);
+  if(!all.length)return empty('Add some numbers in the Data tab.');
+  var best={};
+  rows.forEach(function(r,ri){
+    var f=r.v.map(function(v,j){return isNum(v)?j:-1;}).filter(function(j){return j>=0;});
+    if(!f.length)return;
+    var rmax=f.reduce(function(a,j){return r.v[j]>r.v[a]?j:a;},f[0]),rmin=f.reduce(function(a,j){return r.v[j]<r.v[a]?j:a;},f[0]);
+    if(state.hiMode==='rowmax')best[ri+','+rmax]=1;
+    if(state.hiMode==='rowmin')best[ri+','+rmin]=1;
+  });
+  if(state.hiMode==='colmax'||state.hiMode==='colmin'){
+    for(var j=0;j<n;j++){
+      var ci=-1,cv=null;
+      rows.forEach(function(r,ri){var v=r.v[j];if(!isNum(v))return;if(cv===null||(state.hiMode==='colmax'?v>cv:v<cv)){cv=v;ci=ri;}});
+      if(ci>=0)best[ci+','+j]=1;
+    }
+  }
+  var o='<div class="tblwrap"><table class="dt"><thead><tr><th class="corner">'+esc(d.xLabel||'')+'</th>';
+  d.cats.forEach(function(c,j){o+='<th scope="col">'+sortBtn(j,String(c))+'</th>';});
+  if(state.delta)o+='<th scope="col">Change</th>';
+  o+='</tr></thead><tbody>';
+  rows.forEach(function(r,ri){
+    o+='<tr data-s="'+r.i+'"><th scope="row"><i style="display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;background:'+colorOf(r.i)+'"></i>'+esc(r.name)+'</th>';
+    r.v.forEach(function(v,j){
+      var h=state.heat&&isNum(v)&&mx!==mn?(v-mn)/(mx-mn):0;
+      o+='<td class="'+(best[ri+','+j]?'hi':'')+(isFocus(r.i,j)?' foc':'')+'" style="--h:'+h.toFixed(3)+'">'+(isNum(v)?U(v):'–')+'</td>';
+    });
+    if(state.delta){
+      var f=r.v.filter(isNum),ch=f.length>1?f[f.length-1]-f[0]:NaN;
+      o+='<td>'+(isNum(ch)?'<span class="'+(ch>=0?'up':'down')+'">'+(ch>=0?'▲ +':'▼ ')+fmt(ch)+'</span>':'–')+'</td>';
+    }
+    o+='</tr>';
+  });
+  return o+'</tbody></table></div>';
+}
+function renderTablePie(W){
+  var d=state.data,n=d.cats.length,rows=tableModel();if(!n||!rows.length)return empty();
+  var ci=clamp(state.pieCat,0,n-1),size=clamp(Math.min(W*0.4,270),200,270);
+  var o='<div class="tp"><div><div class="tblwrap"><table class="dt"><thead><tr><th class="corner"></th>';
+  d.cats.forEach(function(c,j){o+='<th scope="col"><button class="sortbtn'+(j===ci?' sel':'')+'" data-act="pieCol" data-c="'+j+'">'+esc(String(c))+'</button></th>';});
+  o+='</tr></thead><tbody>';
+  rows.forEach(function(r){
+    o+='<tr data-s="'+r.i+'"><th scope="row"><i style="display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;background:'+colorOf(r.i)+'"></i>'+esc(r.name)+'</th>';
+    r.v.forEach(function(v,j){o+='<td style="--h:0;'+(j===ci?'background:color-mix(in srgb,var(--hl) 55%,transparent);font-weight:700':'')+'">'+(isNum(v)?U(v):'–')+'</td>';});
+    o+='</tr>';
+  });
+  o+='</tbody></table></div></div><div><div class="cap">'+esc(catLabel(ci))+'</div>'+(pieSVG(ci,size,0,null,null)||'<div class="empty">No positive values</div>')+'</div></div>';
+  return o;
+}
+
+/* ============================================================
+   Renderer: mixed bars + line
+   ============================================================ */
+function renderMixed(W){
+  var H=chartH(W),d=state.data,vs=visSeries(),n=d.cats.length;if(!n||!vs.length)return empty();
+  var lines=vs.filter(function(s){return state.lineSeries.indexOf(s.i)>=0;}),bars=vs.filter(function(s){return state.lineSeries.indexOf(s.i)<0;});
+  var bv=[].concat.apply([],bars.map(function(s){return s.v;})).filter(isNum),lv=[].concat.apply([],lines.map(function(s){return s.v;})).filter(isNum);
+  if(!bv.length&&!lv.length)return empty('Add some numbers in the Data tab.');
+  var scL=niceScale(0,bv.length?Math.max(0,Math.max.apply(null,bv)):Math.max(0,Math.max.apply(null,lv)));
+  var nT=scL.ticks.length,scR=null;
+  if(bv.length&&lv.length){
+    var mxR=Math.max(0,Math.max.apply(null,lv)),step=niceNum((mxR||1)/(nT-1),false);
+    scR={min:0,max:step*(nT-1),step:step,ticks:scL.ticks.map(function(_,k){return +(step*k).toFixed(10);})};
+  }
+  var rw=scR?Math.max.apply(null,scR.ticks.map(function(t){return fmt(t).length;}))*7+22:16;
+  var m={l:leftMargin(scL),r:rw,t:40,b:d.xLabel?60:42},iw=W-m.l-m.r,yL=scaleY(scL,m,H),yR=scR?scaleY(scR,m,H):yL;
+  var gw=iw/n,cx=d.cats.map(function(_,i){return m.l+gw*i+gw/2;}),labs=d.cats.map(String);
+  var o='<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Mixed chart: '+esc(d.title)+'">'+yFrame(W,H,m,scL,null);
+  if(bars.length)o+='<text class="axu" x="'+m.l+'" y="'+(m.t-24)+'">Bars (left axis): '+esc(bars.map(function(s){return s.name;}).join(', '))+'</text>';
+  if(scR){
+    scR.ticks.forEach(function(v){o+='<text class="axt" x="'+(W-m.r+8)+'" y="'+(yR(v)+4)+'" text-anchor="start">'+fmt(v)+'</text>';});
+    o+='<text class="axu" x="'+(W-m.r)+'" y="'+(m.t-10)+'" text-anchor="end">Line (right axis): '+esc(lines.map(function(s){return s.name;}).join(', '))+'</text>';
+  }else if(lines.length){o+='<text class="axu" x="'+(W-m.r)+'" y="'+(m.t-10)+'" text-anchor="end">Line: '+esc(lines.map(function(s){return s.name;}).join(', '))+'</text>';}
+  o+=xLabels(cx,labs,H-m.b+20,iw)+xTitle(W,H,m,d.xLabel);
+  var k=bars.length,bw=clamp((gw*0.7)/Math.max(k,1)-2,8,50),tot=k*bw+(k-1)*2,y0=yL(0);
+  labs.forEach(function(_,ci){
+    var sx=cx[ci]-tot/2;
+    bars.forEach(function(s,j){
+      var v=s.v[ci];if(!isNum(v))return;
+      var yy=yL(v),x=sx+j*(bw+2);
+      o+='<g class="ser" data-s="'+s.i+'"><rect class="bar'+(state.animate?' growY':'')+(isFocus(s.i,ci)?' foc':'')+'" data-t="'+tipI(barTip(bars,s.i,ci))+'" x="'+x.toFixed(1)+'" y="'+Math.min(yy,y0).toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+Math.max(1,Math.abs(yy-y0)).toFixed(1)+'" rx="3" fill="'+s.c+'" fill-opacity=".92"/>';
+      if(state.showVals)o+='<text class="vl" x="'+(x+bw/2).toFixed(1)+'" y="'+(Math.min(yy,y0)-5).toFixed(1)+'" text-anchor="middle">'+fmt(v)+'</text>';
+      o+='</g>';
+    });
+  });
+  lines.forEach(function(s){
+    var pts=s.v.map(function(v,i){return isNum(v)?[cx[i],yR(v)]:null;}),p='',pen=false;
+    pts.forEach(function(q){if(!q){pen=false;return;}p+=(pen?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1);pen=true;});
+    o+='<g class="ser" data-s="'+s.i+'"><path class="hit" d="'+p+'"/><path class="ln'+(state.animate?' draw':'')+'" pathLength="1" d="'+p+'" stroke="'+s.c+'" style="stroke:'+s.c+'"/>';
+    pts.forEach(function(q,i){
+      if(!q)return;
+      var tp='<b>'+esc(labs[i])+'</b><br><i style="background:'+s.c+'"></i>'+esc(s.name)+': <b>'+fmt(s.v[i])+'</b>';
+      o+='<circle class="pt" data-t="'+tipI(tp)+'" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="5" fill="'+s.c+'"/>';
+      if(state.showVals)o+='<text class="vl" x="'+q[0].toFixed(1)+'" y="'+(q[1]-11).toFixed(1)+'" text-anchor="middle">'+fmt(s.v[i])+'</text>';
+    });
+    o+='</g>';
+  });
+  return o+'</svg>';
+}
+
+/* ============================================================
+   Renderers: map
+   ============================================================ */
+function glyph(ch,x,y,s,g,r,c){
+  var o='';
+  function R(a){return (a*s).toFixed(1);}
+  switch(ch){
+    case 't':o+='<circle cx="'+(x+s*.34).toFixed(1)+'" cy="'+(y+s*.38).toFixed(1)+'" r="'+R(.22)+'" fill="#3f7d3b"/><circle cx="'+(x+s*.66).toFixed(1)+'" cy="'+(y+s*.64).toFixed(1)+'" r="'+R(.2)+'" fill="#4b8d44"/>';break;
+    case 'w':o+='<path d="M'+(x+s*.12).toFixed(1)+','+(y+s*.38).toFixed(1)+'q'+R(.19)+','+R(-.14)+' '+R(.38)+',0t'+R(.38)+',0" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.6"/><path d="M'+(x+s*.12).toFixed(1)+','+(y+s*.68).toFixed(1)+'q'+R(.19)+','+R(-.14)+' '+R(.38)+',0t'+R(.38)+',0" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.6"/>';break;
+    case 'h':o+='<rect x="'+(x+s*.2).toFixed(1)+'" y="'+(y+s*.46).toFixed(1)+'" width="'+R(.6)+'" height="'+R(.4)+'" fill="#fff" stroke="#6b5b45" stroke-width="1"/><polygon points="'+(x+s*.12).toFixed(1)+','+(y+s*.48).toFixed(1)+' '+(x+s*.5).toFixed(1)+','+(y+s*.14).toFixed(1)+' '+(x+s*.88).toFixed(1)+','+(y+s*.48).toFixed(1)+'" fill="#c4553f"/>';break;
+    case 'r':
+      var horiz=(c>0&&g[r][c-1]==='r')||(c<COLS-1&&g[r][c+1]==='r');
+      o+=horiz?'<line x1="'+x+'" x2="'+(x+s)+'" y1="'+(y+s/2)+'" y2="'+(y+s/2)+'" stroke="#fff" stroke-width="2" stroke-dasharray="'+(s*.16).toFixed(1)+' '+(s*.14).toFixed(1)+'"/>':'<line y1="'+y+'" y2="'+(y+s)+'" x1="'+(x+s/2)+'" x2="'+(x+s/2)+'" stroke="#fff" stroke-width="2" stroke-dasharray="'+(s*.16).toFixed(1)+' '+(s*.14).toFixed(1)+'"/>';break;
+    case 's':o+='<rect x="'+(x+s*.15).toFixed(1)+'" y="'+(y+s*.3).toFixed(1)+'" width="'+R(.7)+'" height="'+R(.55)+'" fill="#fff" stroke="#8a6a32" stroke-width="1"/><rect x="'+(x+s*.1).toFixed(1)+'" y="'+(y+s*.18).toFixed(1)+'" width="'+R(.8)+'" height="'+R(.18)+'" fill="#d9482b"/>';break;
+    case 'f':for(var k=1;k<=3;k++){o+='<line x1="'+(x+s*.08).toFixed(1)+'" x2="'+(x+s*.92).toFixed(1)+'" y1="'+(y+s*k*.25).toFixed(1)+'" y2="'+(y+s*k*.25).toFixed(1)+'" stroke="#c4a94a" stroke-width="1.6"/>';}break;
+    case 'o':o+='<rect x="'+(x+s*.27).toFixed(1)+'" y="'+(y+s*.1).toFixed(1)+'" width="'+R(.46)+'" height="'+R(.8)+'" fill="#5b6fa6"/><rect x="'+(x+s*.36).toFixed(1)+'" y="'+(y+s*.2).toFixed(1)+'" width="'+R(.1)+'" height="'+R(.1)+'" fill="#dfe6ff"/><rect x="'+(x+s*.54).toFixed(1)+'" y="'+(y+s*.2).toFixed(1)+'" width="'+R(.1)+'" height="'+R(.1)+'" fill="#dfe6ff"/><rect x="'+(x+s*.36).toFixed(1)+'" y="'+(y+s*.42).toFixed(1)+'" width="'+R(.1)+'" height="'+R(.1)+'" fill="#dfe6ff"/><rect x="'+(x+s*.54).toFixed(1)+'" y="'+(y+s*.42).toFixed(1)+'" width="'+R(.1)+'" height="'+R(.1)+'" fill="#dfe6ff"/>';break;
+    case 'p':o+='<circle cx="'+(x+s*.3).toFixed(1)+'" cy="'+(y+s*.34).toFixed(1)+'" r="'+R(.17)+'" fill="#4b8d44"/><circle cx="'+(x+s*.68).toFixed(1)+'" cy="'+(y+s*.66).toFixed(1)+'" r="'+R(.12)+'" fill="#fff"/><circle cx="'+(x+s*.7).toFixed(1)+'" cy="'+(y+s*.3).toFixed(1)+'" r="'+R(.07)+'" fill="#f4a3b8"/><circle cx="'+(x+s*.32).toFixed(1)+'" cy="'+(y+s*.74).toFixed(1)+'" r="'+R(.07)+'" fill="#fff"/>';break;
+    case 'c':o+='<rect x="'+(x+s*.12).toFixed(1)+'" y="'+(y+s*.12).toFixed(1)+'" width="'+R(.76)+'" height="'+R(.76)+'" fill="none" stroke="#fff" stroke-width="1.6"/><text x="'+(x+s/2).toFixed(1)+'" y="'+(y+s*.67).toFixed(1)+'" text-anchor="middle" font-size="'+(s*.5).toFixed(1)+'" font-weight="800" fill="#fff" font-family="sans-serif">P</text>';break;
+  }
+  return o;
+}
+function tileSVG(g,r,c,s,ox,oy){
+  var ch=g[r][c],T=TILES[ch]||TILES.g,x=ox+c*s,y=oy+r*s;
+  return '<g class="tile" data-r="'+r+'" data-c="'+c+'"><rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="'+T.c+'" stroke="rgba(20,33,61,.1)" stroke-width="1"/>'+glyph(ch,x,y,s,g,r,c)+'</g>';
+}
+function tilesSVG(g,s,ox,oy){var o='';for(var r=0;r<ROWS;r++)for(var c=0;c<COLS;c++)o+=tileSVG(g,r,c,s,ox,oy);return o;}
+function changedCells(){
+  var out=[],A=state.map.a,B=state.map.b;
+  for(var r=0;r<ROWS;r++)for(var c=0;c<COLS;c++)if(A[r][c]!==B[r][c])out.push({r:r,c:c,from:A[r][c],to:B[r][c]});
+  return out;
+}
+function pill(x,y,txt,anchor){
+  var w=txt.length*8+22,rx=anchor==='end'?x-w:x;
+  return '<g class="maplab"><rect x="'+rx+'" y="'+y+'" width="'+w+'" height="24" rx="12"/><text x="'+(rx+w/2)+'" y="'+(y+16.5)+'" text-anchor="middle">'+esc(txt)+'</text></g>';
+}
+var mapGeom={s:30,ox:0,oy:0};
+
+function renderMap(W){
+  var M=state.map,view=state.mapView;
+  if(view==='side'){
+    var two=W>=640,w1=two?Math.floor((W-14)/2):W,s1=clamp(Math.floor(w1/COLS),14,52);
+    function one(g,lab){return '<figure><figcaption>'+esc(lab)+'</figcaption><svg class="mapsvg" viewBox="0 0 '+(s1*COLS)+' '+(s1*ROWS)+'" width="'+(s1*COLS)+'" height="'+(s1*ROWS)+'" role="img" aria-label="Map '+esc(lab)+'">'+tilesSVG(g,s1,0,0)+'</svg></figure>';}
+    return '<div class="maprow">'+one(M.a,M.labelA)+one(M.b,M.labelB)+'</div>';
+  }
+  var s=clamp(Math.floor(W/COLS),14,56),mw=s*COLS,mh=s*ROWS,ox=Math.floor((W-mw)/2),top=32;
+  mapGeom={s:s,ox:ox,oy:top};
+  var o='<svg class="mapsvg'+(view==='edit'?' edit-cursor':'')+'" viewBox="0 0 '+W+' '+(top+mh+4)+'" width="'+W+'" height="'+(top+mh+4)+'" role="img" aria-label="Map comparison">';
+  if(view==='slider'){
+    var sx=ox+mw*state.mapSplit;
+    o+=tilesSVG(M.a,s,ox,top)+'<defs><clipPath id="cb"><rect id="cr" x="'+sx+'" y="'+top+'" width="'+(ox+mw-sx)+'" height="'+mh+'"/></clipPath></defs>';
+    o+='<g clip-path="url(#cb)">'+tilesSVG(M.b,s,ox,top)+'</g>';
+    o+=pill(ox,3,M.labelA||'Before','start')+pill(ox+mw,3,M.labelB||'After','end');
+    o+='<g id="hd" transform="translate('+sx+',0)" tabindex="0" role="slider" aria-label="Compare maps" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+Math.round(state.mapSplit*100)+'"><line class="handle-line2" x1="0" x2="0" y1="'+top+'" y2="'+(top+mh)+'"/><line class="handle-line" x1="0" x2="0" y1="'+top+'" y2="'+(top+mh)+'"/><circle class="handle-dot" cx="0" cy="'+(top+mh/2)+'" r="16"/><g transform="translate(0,'+(top+mh/2)+')" fill="var(--ink)"><polygon points="-9,0 -4,-5 -4,5"/><polygon points="9,0 4,-5 4,5"/></g></g>';
+    o+='</svg>';
+    postRender=function(){
+      var svg=$('svg.mapsvg',$('#stage')),cr=$('#cr',svg),hd=$('#hd',svg),drag=false;
+      function setSplit(v){
+        state.mapSplit=clamp(v,0,1);var x=ox+mw*state.mapSplit;
+        cr.setAttribute('x',x);cr.setAttribute('width',ox+mw-x);hd.setAttribute('transform','translate('+x+',0)');hd.setAttribute('aria-valuenow',Math.round(state.mapSplit*100));
+      }
+      function upd(e){var r=svg.getBoundingClientRect();setSplit(((e.clientX-r.left)*(W/r.width)-ox)/mw);}
+      svg.addEventListener('pointerdown',function(e){drag=true;try{svg.setPointerCapture(e.pointerId);}catch(x){}upd(e);});
+      svg.addEventListener('pointermove',function(e){if(drag)upd(e);});
+      svg.addEventListener('pointerup',function(){drag=false;});
+      svg.addEventListener('pointercancel',function(){drag=false;});
+      hd.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){setSplit(state.mapSplit-.05);e.preventDefault();}if(e.key==='ArrowRight'){setSplit(state.mapSplit+.05);e.preventDefault();}});
+    };
+    return o;
+  }
+  if(view==='changes'){
+    var ch=changedCells(),f=state.mapFocus;
+    o+='<g>'+tilesSVG(M.b,s,ox,top)+'</g>';
+    var tcount=0;
+    ch.forEach(function(q){
+      var key=q.from+'>'+q.to,on=!f||f===key;if(!on)return;tcount++;
+      var x=ox+q.c*s,y=top+q.r*s;
+      var tp='<b>'+esc(TILES[q.from].name)+' → '+esc(TILES[q.to].name)+'</b><br><span class="tm">'+esc(M.labelA)+' to '+esc(M.labelB)+'</span>';
+      o+='<g data-t="'+tipI(tp)+'"><rect class="changed-o" x="'+(x+2)+'" y="'+(y+2)+'" width="'+(s-4)+'" height="'+(s-4)+'" rx="3"/><rect class="changed-i" x="'+(x+2)+'" y="'+(y+2)+'" width="'+(s-4)+'" height="'+(s-4)+'" rx="3"/><rect x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" fill="transparent"/></g>';
+    });
+    o+=pill(ox,3,(M.labelA||'Before')+' → '+(M.labelB||'After'),'start');
+    o+=pill(ox+mw,3,tcount+' of '+(COLS*ROWS)+' squares changed','end')+'</svg>';
+    return o;
+  }
+  // edit
+  var tgt=state.mapEdit,g=M[tgt];
+  o+='<g id="tiles">'+tilesSVG(g,s,ox,top)+'</g>'+pill(ox,3,'Editing: '+(tgt==='a'?M.labelA:M.labelB),'start')+'</svg>';
+  postRender=function(){
+    var svg=$('svg.mapsvg',$('#stage')),down=false,last='';
+    function cell(e){
+      var r=svg.getBoundingClientRect(),k=W/r.width,x=(e.clientX-r.left)*k-ox,y=(e.clientY-r.top)*k-top;
+      var c=Math.floor(x/s),rr=Math.floor(y/s);
+      return (c>=0&&c<COLS&&rr>=0&&rr<ROWS)?{r:rr,c:c}:null;
+    }
+    function paint(e){
+      var q=cell(e);if(!q)return;var key=q.r+','+q.c;if(key===last)return;last=key;
+      var grid=state.map[state.mapEdit];if(grid[q.r][q.c]===state.brush)return;
+      grid[q.r][q.c]=state.brush;
+      $('#tiles',svg).innerHTML=tilesSVG(grid,s,ox,top);
+    }
+    svg.addEventListener('pointerdown',function(e){down=true;last='';try{svg.setPointerCapture(e.pointerId);}catch(x){}paint(e);});
+    svg.addEventListener('pointermove',function(e){if(down)paint(e);});
+    function end(){if(!down)return;down=false;save();renderLegend();if(state.tab==='insights')renderPanel();}
+    svg.addEventListener('pointerup',end);svg.addEventListener('pointercancel',end);
+  };
+  return o;
+}
+
+/* ============================================================
+   Renderers: process
+   ============================================================ */
+function stepState(i){
+  if(state.pStep<0)return '';
+  if(i===state.pStep)return ' active';
+  return i<state.pStep?'':' future';
+}
+function renderFlow(W){
+  var steps=state.process.steps,n=steps.length;if(!n)return empty('Add at least one step in the Data tab.');
+  var cols=W>=860?4:W>=600?3:W>=360?2:1,pad=8,gapX=38,gapY=38,bw=Math.floor((W-2*pad-(cols-1)*gapX)/cols),bh=122;
+  var rows=Math.ceil(n/cols),H=pad*2+rows*bh+(rows-1)*gapY;
+  function pos(i){var r=Math.floor(i/cols),k=i%cols,c=r%2?cols-1-k:k;return {x:pad+c*(bw+gapX),y:pad+r*(bh+gapY),row:r};}
+  var o='<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Process diagram: '+esc(state.process.title)+'"><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ahp" d="M0,0L10,5L0,10z"/></marker></defs>';
+  for(var i=0;i<n-1;i++){
+    var a=pos(i),b=pos(i+1),x1,y1,x2,y2;
+    if(a.row===b.row){var dir=a.row%2?-1:1;x1=a.x+(dir>0?bw:0);x2=b.x+(dir>0?0:bw);y1=y2=a.y+bh/2;}
+    else{x1=x2=a.x+bw/2;y1=a.y+bh;y2=b.y;}
+    o+='<line class="parrow" x1="'+(x1+(x1===x2?0:(x2>x1?4:-4)))+'" y1="'+(y1+(y1===y2?0:4))+'" x2="'+(x2+(x1===x2?0:(x2>x1?-6:6)))+'" y2="'+(y2-(y1===y2?0:6))+'" marker-end="url(#ah)"/>';
+  }
+  var tmax=Math.floor((bw-52)/7.4),dmax=Math.floor((bw-24)/6.3);
+  steps.forEach(function(st,i){
+    var p=pos(i),tl=wrapText(st.title,Math.max(6,tmax),2),dl=wrapText(st.detail||'',Math.max(8,dmax),4);
+    o+='<g class="pgroup'+stepState(i)+'" data-act="pGo" data-i="'+i+'" tabindex="0" role="button" aria-label="Stage '+(i+1)+': '+esc(st.title)+'"><rect class="pnode" x="'+p.x+'" y="'+p.y+'" width="'+bw+'" height="'+bh+'" rx="11"/>';
+    o+='<circle class="pb" cx="'+(p.x+20)+'" cy="'+(p.y+22)+'" r="12"/><text class="pbt" x="'+(p.x+20)+'" y="'+(p.y+26.5)+'" text-anchor="middle">'+(i+1)+'</text>';
+    tl.forEach(function(t,k){o+='<text class="ptx" x="'+(p.x+40)+'" y="'+(p.y+(tl.length>1?20:27)+k*16)+'">'+esc(t)+'</text>';});
+    dl.forEach(function(t,k){o+='<text class="pd" x="'+(p.x+12)+'" y="'+(p.y+58+k*16)+'">'+esc(t)+'</text>';});
+    o+='</g>';
+  });
+  return o+'</svg>';
+}
+function renderCycle(W){
+  var steps=state.process.steps,n=steps.length;if(!n)return empty('Add at least one step in the Data tab.');
+  var narrow=W<560,H=clamp(Math.round(W*0.85),380,540),cx=W/2,cy=H/2,dr=15;
+  var labelSpace=narrow?74:150,R=Math.max(60,Math.min(W/2-labelSpace,H/2-52));
+  var o='<svg viewBox="0 0 '+W+' '+H+'" width="'+W+'" height="'+H+'" role="img" aria-label="Cycle diagram: '+esc(state.process.title)+'"><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ahp" d="M0,0L10,5L0,10z"/></marker></defs>';
+  o+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(R-24)+'" fill="var(--surface)" opacity=".85"/>';
+  var ang=function(i){return -Math.PI/2+i*2*Math.PI/n;};
+  if(n>1){
+    var trim=(dr+6)/R;
+    for(var i=0;i<n;i++){
+      var a0=ang(i)+trim,a1=ang(i+1)-trim;if(a1<=a0)continue;
+      o+='<path class="parrow" d="M'+(cx+R*Math.cos(a0)).toFixed(1)+','+(cy+R*Math.sin(a0)).toFixed(1)+'A'+R+','+R+' 0 0 1 '+(cx+R*Math.cos(a1)).toFixed(1)+','+(cy+R*Math.sin(a1)).toFixed(1)+'" marker-end="url(#ah)"/>';
+    }
+  }
+  var cmax=narrow?14:22;
+  steps.forEach(function(st,i){
+    var a=ang(i),px=cx+R*Math.cos(a),py=cy+R*Math.sin(a),co=Math.cos(a),si=Math.sin(a);
+    var lx=cx+(R+dr+10)*co,ly=cy+(R+dr+10)*si,anchor=co>0.3?'start':co<-0.3?'end':'middle';
+    var lines=wrapText(st.title,cmax,2),yy=anchor==='middle'?(si<0?ly-(lines.length-1)*15-4:ly+14):ly+4-(lines.length-1)*7;
+    o+='<g class="pgroup'+stepState(i)+'" data-act="pGo" data-i="'+i+'" tabindex="0" role="button" aria-label="Stage '+(i+1)+': '+esc(st.title)+'"><circle class="pb" cx="'+px.toFixed(1)+'" cy="'+py.toFixed(1)+'" r="'+dr+'" stroke="var(--surface)" stroke-width="3"/><text class="pbt" x="'+px.toFixed(1)+'" y="'+(py+4.5).toFixed(1)+'" text-anchor="middle">'+(i+1)+'</text>';
+    lines.forEach(function(t,k){o+='<text class="ptx" x="'+lx.toFixed(1)+'" y="'+(yy+k*15).toFixed(1)+'" text-anchor="'+anchor+'" style="font-size:'+(narrow?12.5:14)+'px">'+esc(t)+'</text>';});
+    o+='</g>';
+  });
+  var cm=Math.max(10,Math.floor((R-30)*1.5/6.3));
+  if(state.pStep>=0&&steps[state.pStep]){
+    var st=steps[state.pStep],tl=wrapText(st.title,cm,2),dl=wrapText(st.detail||'',cm,5),tot=tl.length+dl.length,y0=cy-(tot*16)/2+8;
+    tl.forEach(function(t,k){o+='<text class="cyc-title" x="'+cx+'" y="'+(y0+k*18)+'" text-anchor="middle">'+esc(t)+'</text>';});
+    dl.forEach(function(t,k){o+='<text class="pd" x="'+cx+'" y="'+(y0+tl.length*18+4+k*16)+'" text-anchor="middle">'+esc(t)+'</text>';});
+  }else{
+    var tl2=wrapText(state.process.title,cm,4);
+    tl2.forEach(function(t,k){o+='<text class="cyc-title" x="'+cx+'" y="'+(cy-(tl2.length-1)*9+k*18+5)+'" text-anchor="middle">'+esc(t)+'</text>';});
+  }
+  return o+'</svg>';
+}
+
+/* ============================================================
+   Controls, legend, main render
+   ============================================================ */
+function chip(act,label,on,extra){return '<button class="chip" data-act="'+act+'" aria-pressed="'+(!!on)+'" '+(extra||'')+'>'+label+'</button>';}
+function controlsHTML(){
+  var id=state.mode,d=state.data,n=d.cats.length;
+  switch(id){
+    case 'line':return chip('keyPts','Mark highest and lowest',state.keyPts)+chip('showVals','Show values',state.showVals);
+    case 'bar':case 'barh':return chip('showVals','Show values',state.showVals);
+    case 'stack':return chip('stackPct','Show as %',state.stackPct)+chip('showVals','Show totals',state.showVals);
+    case 'pie':
+      return '<span class="lbl">Column:</span><button class="chip" data-act="pieStep" data-d="-1" aria-label="Previous column">←</button><select class="chip" data-bind="pieCat" aria-label="Choose column">'+d.cats.map(function(c,i){return '<option value="'+i+'"'+(i===state.pieCat?' selected':'')+'>'+esc(String(c))+'</option>';}).join('')+'</select><button class="chip" data-act="pieStep" data-d="1" aria-label="Next column">→</button>'+(n>1?'<button class="chip" data-act="piePlay">'+(state.playing?'Pause':'Play through')+'</button>':'');
+    case 'pies':return '';
+    case 'table':
+      return chip('heat','Heatmap',state.heat)+chip('delta','Show change',state.delta)+'<select class="chip" data-bind="hiMode" aria-label="Highlight"><option value="none">Highlight: none</option><option value="rowmax"'+(state.hiMode==='rowmax'?' selected':'')+'>Highest in each row</option><option value="rowmin"'+(state.hiMode==='rowmin'?' selected':'')+'>Lowest in each row</option><option value="colmax"'+(state.hiMode==='colmax'?' selected':'')+'>Highest in each column</option><option value="colmin"'+(state.hiMode==='colmin'?' selected':'')+'>Lowest in each column</option></select>'+(state.sort?'<button class="chip" data-act="sortClear">Clear sort</button>':'');
+    case 'mixed':
+      return '<span class="lbl">Show as line:</span>'+d.series.map(function(s,i){return chip('toggleLine',esc(sName(i)),state.lineSeries.indexOf(i)>=0,'data-i="'+i+'"');}).join('')+chip('showVals','Values',state.showVals);
+    case 'tablepie':return '';
+    case 'map':
+      return [['slider','Slider'],['side','Side by side'],['changes','Changes'],['edit','Edit']].map(function(v){return chip('mapView',v[1],state.mapView===v[0],'data-v="'+v[0]+'"');}).join('');
+    case 'flow':case 'cycle':
+      var ns=state.process.steps.length;
+      return '<button class="chip" data-act="pPrev">← Back</button><button class="chip" data-act="pNext">Next →</button><button class="chip" data-act="pPlay">'+(state.playing?'Pause':'Play')+'</button>'+chip('pAll','Show all',state.pStep<0)+(state.pStep>=0?'<span class="lbl">Step '+(state.pStep+1)+' of '+ns+'</span>':'');
+  }
+  return '';
+}
+function legendHTML(){
+  var kind=MODE[state.mode].kind;
+  if(kind==='data'){
+    var hs=state.hover!=null?state.hover:state.lock;
+    return state.data.series.map(function(s,i){
+      var hidden=state.hidden.has(i);
+      return '<button class="lg'+(hs===i?' on':'')+'" data-act="legend" data-i="'+i+'" aria-pressed="'+(!hidden)+'" title="Click to show or hide"><i style="background:'+colorOf(i)+'"></i>'+esc(sName(i))+'</button>';
+    }).join('');
+  }
+  if(kind==='map'){
+    var used={};['a','b'].forEach(function(k){state.map[k].forEach(function(r){r.forEach(function(ch){used[ch]=1;});});});
+    return Object.keys(TILES).filter(function(ch){return used[ch]||state.mapView==='edit';}).map(function(ch){
+      var T=TILES[ch];
+      return state.mapView==='edit'
+        ?'<button class="lg'+(state.brush===ch?' on':'')+'" data-act="brush" data-ch="'+ch+'" aria-pressed="'+(state.brush===ch)+'"><i style="background:'+T.c+';border:1px solid rgba(20,33,61,.3)"></i>'+T.name+'</button>'
+        :'<span class="lg static"><i style="background:'+T.c+';border:1px solid rgba(20,33,61,.3)"></i>'+T.name+'</span>';
+    }).join('');
+  }
+  return '';
+}
+function renderLegend(){$('#legend').innerHTML=legendHTML();}
+function applyHighlight(){
+  var hs=state.hover!=null?state.hover:state.lock;
+  $$('[data-s]',$('#stage')).forEach(function(el){el.classList.toggle('dim',hs!=null&&+el.getAttribute('data-s')!==hs);});
+  if(MODE[state.mode].kind==='data')$$('#legend .lg').forEach(function(el){var i=+el.getAttribute('data-i');el.classList.toggle('on',hs===i);});
+}
+function figInfo(){
+  var m=MODE[state.mode];
+  if(m.kind==='map')return {t:state.map.title||'Untitled maps',s:state.map.labelA+' and '+state.map.labelB};
+  if(m.kind==='process')return {t:state.process.title||'Untitled process',s:state.process.steps.length+' stages'};
+  var d=state.data;
+  return {t:d.title||'Untitled chart',s:(d.unit?'Unit: '+d.unit+' · ':'')+d.series.length+' series, '+d.cats.length+' columns'};
+}
+var lastW=0;
+function stageWidth(){var st=$('#stage');return Math.max(260,(st.clientWidth||784)-26);}
+function render(){
+  var m=MODE[state.mode],st=$('#stage');
+  tips=[];postRender=null;
+  var fi=figInfo();$('#figTitle').textContent=fi.t;$('#figSub').textContent=fi.s;
+  $('#controls').innerHTML=controlsHTML();
+  var W=stageWidth();lastW=W;var html;
+  switch(state.mode){
+    case 'line':html=renderLine(W);break;
+    case 'bar':html=renderBars(W,false);break;
+    case 'barh':html=renderBars(W,true);break;
+    case 'stack':html=renderStack(W);break;
+    case 'pie':html=renderPie(W);break;
+    case 'pies':html=renderPies(W);break;
+    case 'table':html=renderTable(W);break;
+    case 'map':html=renderMap(W);break;
+    case 'flow':html=renderFlow(W);break;
+    case 'cycle':html=renderCycle(W);break;
+    case 'mixed':html=renderMixed(W);break;
+    case 'tablepie':html=renderTablePie(W);break;
+    default:html=empty();
+  }
+  st.innerHTML=html;
+  renderLegend();
+  $('#hint').textContent=m.hint;
+  if(postRender)postRender();
+  applyHighlight();
+  state.animate=false;
+}
+var softT=0;
+function softRender(){clearTimeout(softT);softT=setTimeout(function(){render();save();},90);}
+
+/* ============================================================
+   Analysis (data views)
+   ============================================================ */
+function analyse(){
+  var d=state.data,n=d.cats.length;
+  var S=d.series.map(function(s,i){
+    var v=s.values.map(function(x){return isNum(x)?x:NaN;}),idx=[];
+    v.forEach(function(x,k){if(isNum(x))idx.push(k);});
+    if(!idx.length)return null;
+    var f=idx[0],l=idx[idx.length-1],mx=f,mn=f;
+    idx.forEach(function(k){if(v[k]>v[mx])mx=k;if(v[k]<v[mn])mn=k;});
+    var first=v[f],last=v[l],change=last-first,pct=first!==0?change/Math.abs(first)*100:null;
+    var range=v[mx]-v[mn],mean=idx.reduce(function(a,k){return a+v[k];},0)/idx.length;
+    var diffs=[];for(var q=1;q<idx.length;q++)diffs.push(v[idx[q]]-v[idx[q-1]]);
+    var tol=range*0.03,ups=diffs.filter(function(x){return x>tol;}).length,downs=diffs.filter(function(x){return x<-tol;}).length,trend;
+    if(idx.length<2)trend='single';
+    else if(range<=Math.abs(mean)*0.05)trend='stable';
+    else if(downs===0&&ups>0)trend='increase';
+    else if(ups===0&&downs>0)trend='decrease';
+    else if(ups>0&&downs>0)trend='fluctuate';
+    else trend='stable';
+    return {i:i,name:sName(i),v:v,f:f,l:l,first:first,last:last,max:v[mx],maxI:mx,min:v[mn],minI:mn,change:change,pct:pct,trend:trend,mean:mean};
+  }).filter(Boolean);
+  var hi=null,lo=null,rise=null,fall=null;
+  S.forEach(function(s){
+    if(!hi||s.max>hi.v)hi={v:s.max,s:s.i,i:s.maxI,name:s.name};
+    if(!lo||s.min<lo.v)lo={v:s.min,s:s.i,i:s.minI,name:s.name};
+    if(s.trend!=='single'){
+      if(s.change>0&&(!rise||s.change>rise.change))rise=s;
+      if(s.change<0&&(!fall||s.change<fall.change))fall=s;
+    }
+  });
+  var cross=[];
+  if(n>1)for(var a=0;a<S.length;a++)for(var b=a+1;b<S.length;b++){
+    var A=S[a],B=S[b],d0=A.v[0]-B.v[0],d1=A.v[n-1]-B.v[n-1];
+    if(isNum(d0)&&isNum(d1)&&d0*d1<0)cross.push({win:d1>0?A:B,lose:d1>0?B:A});
+  }
+  var res={S:S,hi:hi,lo:lo,rise:rise,fall:fall,cross:cross};
+  res.overview=overviewText(res);
+  return res;
+}
+function adverb(pct){
+  var p=pct==null?60:Math.abs(pct);
+  return p>=100?'dramatically':p>=50?'significantly':p>=20?'considerably':p>=8?'steadily':'slightly';
+}
+function seriesSentence(s){
+  var c=catLabel,k=s.i,up=['rose','climbed','grew'],dn=['fell','declined','dropped'];
+  if(s.trend==='increase')return s.name+' '+up[k%3]+' '+adverb(s.pct)+' from '+U(s.first)+' in '+c(s.f)+' to '+U(s.last)+' in '+c(s.l)+'.';
+  if(s.trend==='decrease')return s.name+' '+dn[k%3]+' '+adverb(s.pct)+' from '+U(s.first)+' in '+c(s.f)+' to '+U(s.last)+' in '+c(s.l)+'.';
+  if(s.trend==='fluctuate')return s.name+' fluctuated, peaking at '+U(s.max)+' in '+c(s.maxI)+' and reaching a low of '+U(s.min)+' in '+c(s.minI)+'.';
+  if(s.trend==='stable')return s.name+' remained broadly stable at around '+U(s.mean)+'.';
+  return s.name+' was '+U(s.first)+' in '+c(s.f)+'.';
+}
+function overviewText(A){
+  var d=state.data,n=d.cats.length,S=A.S;if(!S.length)return '';
+  var nounMap={line:'line graph',bar:'bar chart',barh:'bar chart',stack:'stacked bar chart',pie:'pie chart',pies:'pie charts',table:'table',mixed:'chart',tablepie:'table and pie chart'};
+  var noun=nounMap[state.mode]||'chart',title=lcFirst(String(d.title||'the data').replace(/\.+$/,''));
+  var intro='The '+noun+' illustrates '+title+'.';
+  var ov='';
+  if(n>1&&S.length>0){
+    var grp={increase:[],decrease:[],fluctuate:[],stable:[]};
+    S.forEach(function(s){if(grp[s.trend])grp[s.trend].push(s.name);});
+    var parts=[];
+    if(grp.increase.length)parts.push(joinList(grp.increase)+' rose');
+    if(grp.decrease.length)parts.push(joinList(grp.decrease)+' fell');
+    if(grp.fluctuate.length)parts.push(joinList(grp.fluctuate)+' fluctuated');
+    if(grp.stable.length)parts.push(joinList(grp.stable)+' remained stable');
+    if(parts.length===1&&S.length>2&&(grp.increase.length===S.length||grp.decrease.length===S.length)){
+      ov='Overall, all '+S.length+' categories '+(grp.increase.length?'showed an upward':'showed a downward')+' trend between '+catLabel(0)+' and '+catLabel(n-1)+'.';
+    }else if(parts.length){
+      ov='Overall, '+parts.slice(0,-1).join(', ')+(parts.length>1?', while ':'')+parts[parts.length-1]+' over the period.';
+    }
+    var topFirst=S.slice().sort(function(a,b){return (b.v[0]||0)-(a.v[0]||0);})[0],topLast=S.slice().sort(function(a,b){return (b.v[n-1]||0)-(a.v[n-1]||0);})[0];
+    if(S.length>1){
+      if(topFirst.i===topLast.i)ov+=' '+topLast.name+' remained the highest throughout.';
+      else ov+=' '+topLast.name+' ended the period with the highest figure.';
+    }
+  }else{
+    var top=S.slice().sort(function(a,b){return b.first-a.first;})[0],bot=S.slice().sort(function(a,b){return a.first-b.first;})[0];
+    ov='Overall, '+top.name+' had the highest figure ('+U(top.first)+'), while '+bot.name+' had the lowest ('+U(bot.first)+').';
+  }
+  return (intro+' '+ov).trim();
+}
+function dataInsights(){
+  var A=analyse(),d=state.data,n=d.cats.length;
+  if(!A.S.length)return '<p class="muted">Add some numbers in the Data tab to see the key features.</p>';
+  var h='<div class="card"><h3>Model introduction and overview</h3><p class="draft">'+esc(A.overview)+'</p><div class="btnrow"><button class="btn sm" data-act="copy" data-text="'+esc(A.overview)+'">Copy</button></div><p class="note">Use this as a model, then rewrite it in your own words. An overview should not contain detailed numbers.</p></div>';
+  h+='<div class="card"><h3>Key features to report</h3>';
+  function kf(label,txt,s,i,sub){return '<button class="kf" data-act="focus" data-s="'+s+'" data-i="'+i+'" aria-pressed="'+(isFocus(s,i))+'"><span><b>'+label+'</b><small>'+esc(txt)+(sub?'<br>'+esc(sub):'')+'</small></span></button>';}
+  if(A.hi)h+=kf('Highest value',A.hi.name+': '+U(A.hi.v)+' in '+catLabel(A.hi.i),A.hi.s,A.hi.i);
+  if(A.lo&&(A.S.length>1||n>1))h+=kf('Lowest value',A.lo.name+': '+U(A.lo.v)+' in '+catLabel(A.lo.i),A.lo.s,A.lo.i);
+  if(A.rise)h+=kf('Biggest rise',A.rise.name+' went from '+U(A.rise.first)+' to '+U(A.rise.last),A.rise.i,A.rise.l);
+  if(A.fall)h+=kf('Biggest fall',A.fall.name+' went from '+U(A.fall.first)+' to '+U(A.fall.last),A.fall.i,A.fall.l);
+  A.cross.slice(0,3).forEach(function(c){h+=kf('Change of rank',c.win.name+' overtook '+c.lose.name+' by '+catLabel(n-1),c.win.i,n-1);});
+  h+='</div>';
+  h+='<div class="card"><h3>Series by series</h3>';
+  var lab={increase:'Rising',decrease:'Falling',fluctuate:'Fluctuating',stable:'Stable',single:'One value'};
+  A.S.forEach(function(s){
+    h+='<button class="kf" data-act="lock" data-s="'+s.i+'" aria-pressed="'+(state.lock===s.i)+'"><span><b><i style="display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;background:'+colorOf(s.i)+'"></i>'+esc(s.name)+'</b><small>'+esc(seriesSentence(s))+'</small></span><span class="badge '+(s.trend==='increase'?'up':s.trend==='decrease'?'down':'')+'">'+lab[s.trend]+'</span></button>';
+  });
+  h+='</div>';
+  if(state.mode==='pie'||state.mode==='pies'||state.mode==='tablepie'){
+    var ci=state.mode==='pies'?n-1:clamp(state.pieCat,0,n-1),S2=sharesAt(ci),list=S2.items.slice().sort(function(a,b){return b.p-a.p;});
+    if(list.length){
+      h+='<div class="card"><h3>Shares in '+esc(catLabel(ci))+'</h3><table class="mini"><tbody>';
+      list.forEach(function(it){h+='<tr><td><i style="background:'+colorOf(it.i)+'"></i>'+esc(it.name)+'</td><td><b>'+fmt(Math.round(it.p*10)/10)+'%</b></td><td class="muted" style="text-align:left">'+esc(fracPhrase(it.p))+'</td></tr>';});
+      h+='</tbody></table>';
+      if(list.length>=2)h+='<p class="draft">'+esc(list[0].name)+' accounted for '+fmt(Math.round(list[0].p))+'% ('+fracPhrase(list[0].p)+'), while '+esc(list[list.length-1].name)+' made up only '+fmt(Math.round(list[list.length-1].p))+'%.</p>';
+      if(n>1){
+        var F=sharesAt(0),L=sharesAt(n-1);
+        h+='<h3 style="margin-top:10px">Shift from '+esc(catLabel(0))+' to '+esc(catLabel(n-1))+'</h3><table class="mini"><tbody>';
+        d.series.forEach(function(s,i){
+          if(state.hidden.has(i))return;
+          var a=F.items.filter(function(q){return q.i===i;})[0],b=L.items.filter(function(q){return q.i===i;})[0],pa=a?a.p:0,pb=b?b.p:0,dd=pb-pa;
+          h+='<tr><td><i style="background:'+colorOf(i)+'"></i>'+esc(sName(i))+'</td><td>'+fmt(Math.round(pa))+'% → '+fmt(Math.round(pb))+'%</td><td class="'+(dd>=0?'up':'down')+'">'+(dd>=0?'+':'')+fmt(Math.round(dd*10)/10)+' pp</td></tr>';
+        });
+        h+='</tbody></table>';
+      }
+      h+='</div>';
+    }
+  }
+  if(state.focus||state.lock!=null)h+='<div class="btnrow"><button class="btn sm" data-act="clearFocus">Clear highlight</button></div>';
+  return h;
+}
+function mapInsights(){
+  var M=state.map,ch=changedCells(),cnt={a:{},b:{}};
+  ['a','b'].forEach(function(k){M[k].forEach(function(r){r.forEach(function(c){cnt[k][c]=(cnt[k][c]||0)+1;});});});
+  var keys=Object.keys(TILES).filter(function(t){return cnt.a[t]||cnt.b[t];}).sort(function(x,y){return Math.abs((cnt.b[y]||0)-(cnt.a[y]||0))-Math.abs((cnt.b[x]||0)-(cnt.a[x]||0));});
+  var trans={};ch.forEach(function(q){var k=q.from+'>'+q.to;trans[k]=(trans[k]||0)+1;});
+  var tl=Object.keys(trans).sort(function(x,y){return trans[y]-trans[x];});
+  var total=COLS*ROWS,pct=ch.length/total*100;
+  var dev=function(k){return DEVELOPED.split('').reduce(function(a,t){return a+(cnt[k][t]||0);},0);};
+  var devA=dev('a'),devB=dev('b'),newT=keys.filter(function(t){return !cnt.a[t]&&cnt.b[t];}),goneT=keys.filter(function(t){return cnt.a[t]&&!cnt.b[t];});
+  var ov='The maps show '+lcFirst(String(M.title||'how the area changed').replace(/\.+$/,''))+'.';
+  if(!ch.length)ov+=' The two maps are currently identical.';
+  else{
+    ov+=' Overall, '+(devB>devA?'the area became considerably more developed':devB<devA?'the area became less built-up and more natural':'the layout was reorganised without a big change in how built-up it is')+', with '+fracPhrase(pct)+' of the area altered.';
+    if(tl[0]){var p=tl[0].split('>');ov+=' The most noticeable change is that '+TILES[p[0]].name.toLowerCase()+' was replaced by '+TILES[p[1]].name.toLowerCase()+'.';}
+  }
+  var h='<div class="card"><h3>Model introduction and overview</h3><p class="draft">'+esc(ov)+'</p><div class="btnrow"><button class="btn sm" data-act="copy" data-text="'+esc(ov)+'">Copy</button></div></div>';
+  h+='<div class="card"><h3>What changed ('+ch.length+' of '+total+' squares)</h3>';
+  if(!tl.length)h+='<p class="muted">Edit the maps in the Data tab, or load the sample.</p>';
+  tl.forEach(function(k){
+    var p=k.split('>');
+    h+='<button class="kf" data-act="mapT" data-k="'+k+'" aria-pressed="'+(state.mapFocus===k)+'"><span><b>'+TILES[p[0]].name+' → '+TILES[p[1]].name+'</b><small>'+trans[k]+' square'+(trans[k]>1?'s':'')+' · click to outline them on the map</small></span></button>';
+  });
+  h+='</div>';
+  if(newT.length||goneT.length){
+    h+='<div class="card"><h3>New and removed features</h3>';
+    if(newT.length)h+='<p><b>Introduced:</b> '+newT.map(function(t){return TILES[t].name;}).join(', ')+'</p>';
+    if(goneT.length)h+='<p><b>No longer present:</b> '+goneT.map(function(t){return TILES[t].name;}).join(', ')+'</p>';
+    h+='</div>';
+  }
+  h+='<div class="card"><h3>Counts of each feature</h3><table class="mini"><thead><tr><th></th><th>'+esc(M.labelA)+'</th><th>'+esc(M.labelB)+'</th><th></th></tr></thead><tbody>';
+  keys.forEach(function(t){var a=cnt.a[t]||0,b=cnt.b[t]||0,dd=b-a;h+='<tr><td><i style="background:'+TILES[t].c+';border:1px solid rgba(20,33,61,.25)"></i>'+TILES[t].name+'</td><td>'+a+'</td><td>'+b+'</td><td class="'+(dd>0?'up':dd<0?'down':'')+'">'+(dd>0?'+':'')+dd+'</td></tr>';});
+  return h+'</tbody></table><p class="note">Counts are in grid squares, a quick way to judge “much larger” or “slightly smaller”.</p></div>';
+}
+function processInsights(){
+  var P=state.process,steps=P.steps,n=steps.length,cyc=state.mode==='cycle';
+  if(!n)return '<p class="muted">Add steps in the Data tab.</p>';
+  var seq=['First,','Next,','After that,','Then,','Following this,','Subsequently,','Once this is complete,','After this,'];
+  function sentence(st){var t=(st.detail||st.title).replace(/\.+$/,'');return lcFirst(t);}
+  var lines=steps.map(function(st,i){
+    var w=i===0?(cyc?'The cycle begins when':'First,'):(i===n-1&&n>2?(cyc?'Finally, the cycle repeats as':'Finally,'):seq[Math.min(i,seq.length-1)]);
+    if(i===0&&cyc)return 'The cycle begins when '+sentence(st)+'.';
+    if(i===n-1&&n>2&&cyc)return 'Finally, '+sentence(st)+', and the whole process starts again.';
+    return w+' '+sentence(st)+'.';
+  });
+  var ov='The diagram illustrates '+lcFirst(String(P.title||'the process').replace(/\.+$/,''))+'. Overall, there are '+n+' main stages, '+(cyc?'which form a continuous cycle':'beginning with '+steps[0].title.toLowerCase()+' and ending with '+steps[n-1].title.toLowerCase())+'.';
+  var h='<div class="card"><h3>Model introduction and overview</h3><p class="draft">'+esc(ov)+'</p><div class="btnrow"><button class="btn sm" data-act="copy" data-text="'+esc(ov)+'">Copy</button></div></div>';
+  h+='<div class="card"><h3>Sequence frame</h3><p class="note" style="margin-top:0">Click a line to focus that stage. Change the verbs into the passive voice, for example “is heated” or “are separated”.</p>';
+  lines.forEach(function(l,i){h+='<button class="kf" data-act="pGo" data-i="'+i+'" aria-pressed="'+(state.pStep===i)+'"><span><b>Stage '+(i+1)+': '+esc(steps[i].title)+'</b><small>'+esc(l)+'</small></span></button>';});
+  h+='<div class="btnrow"><button class="btn sm" data-act="copy" data-text="'+esc(lines.join(' '))+'">Copy all</button></div></div>';
+  h+='<div class="card"><h3>Tips</h3><p class="note" style="margin:0">'+(cyc?'A cycle has no real start. Pick a clear starting point, and say that the process repeats. Do not describe your own opinion.':'Describe every stage in order. Mention the first and last stage clearly, and use time linkers instead of repeating “then”.')+' Use the passive voice for man-made processes.</p></div>';
+  return h;
+}
+
+/* ============================================================
+   Language bank
+   ============================================================ */
+var LANG=[
+  {t:['data'],title:'Overview starters',items:['Overall,','It is clear that','The most striking feature is that','In general,','It is noticeable that','Taken as a whole,']},
+  {t:['data'],title:'Going up',items:['rose','climbed','grew','increased','surged','went up','shot up','a steady rise','an upward trend','a sharp increase']},
+  {t:['data'],title:'Going down',items:['fell','dropped','declined','decreased','dipped','plunged','a gradual decline','a downward trend','a slump','a slight dip']},
+  {t:['data'],title:'Staying level, peaks and lows',items:['remained stable','levelled off','plateaued','stayed constant','fluctuated','peaked at','reached a high of','bottomed out at','hit a low of']},
+  {t:['data'],title:'Size and speed of change',items:['dramatically','sharply','considerably','significantly','moderately','steadily','gradually','slightly','marginally']},
+  {t:['data'],title:'Comparing',items:['whereas','while','in contrast','by comparison','twice as high as','considerably higher than','slightly lower than','the same as','overtook','the second highest','the least popular','far more … than']},
+  {t:['data'],title:'Approximating',items:['approximately','roughly','just under','just over','around','nearly','well over','exactly']},
+  {t:['pie','data'],title:'Proportions and shares',items:['accounted for','made up','constituted','comprised','the majority','a minority','nearly half','just over a quarter','one in five','a small fraction','the largest share','the smallest proportion']},
+  {t:['map'],title:'Describing changes',items:['was replaced by','was converted into','was demolished','was cleared','was constructed','was built','was extended','was expanded','was relocated','remained unchanged','was developed','was turned into','was added','disappeared']},
+  {t:['map'],title:'Location',items:['to the north of','in the south-east','adjacent to','next to','opposite','alongside','in the centre of','on the western side','between … and …','at the entrance to']},
+  {t:['map'],title:'Time links',items:['by 2020','in the following years','over the period','subsequently','at present','by the end of the period','in the later map']},
+  {t:['process'],title:'Sequencing',items:['First,','To begin with,','Initially,','Next,','After that,','Subsequently,','Following this,','Once this is complete,','Meanwhile,','At the same time,','Finally,','In the final stage,']},
+  {t:['process'],title:'Passive voice frames',items:['is heated','are collected','is then transported','is stored','are separated','is crushed','is filtered','is poured into','is left to cool']},
+  {t:['process'],title:'Linking and purpose',items:['in order to','so that','which is then used for','resulting in','during which','where','after which','as a result']},
+  {t:['process'],title:'Cycles',items:['The cycle begins when','The process then repeats','continuously','starts all over again','completes the cycle','there is no real starting point']}
+];
+function languageHTML(){
+  var kind=MODE[state.mode].kind,want=kind==='map'?['map']:kind==='process'?['process']:(state.mode==='pie'||state.mode==='pies'||state.mode==='tablepie')?['pie','data']:['data'];
+  var rel=LANG.filter(function(g){return g.t.some(function(t){return want.indexOf(t)>=0;});}),oth=LANG.filter(function(g){return rel.indexOf(g)<0;});
+  function grp(g){return '<div class="lang-group"><h4>'+esc(g.title)+'</h4><div class="chips">'+g.items.map(function(x){return '<button class="phrase" data-act="copy" data-text="'+esc(x)+'">'+esc(x)+'</button>';}).join('')+'</div></div>';}
+  var h='<p class="note" style="margin-top:0">Click any phrase to copy it.</p>'+rel.map(grp).join('');
+  h+='<div class="card"><h3>Percentage to words</h3><div class="field" style="margin-bottom:6px"><label for="pctIn">Type a percentage</label><input id="pctIn" type="text" inputmode="decimal" placeholder="e.g. 27"></div><p class="draft" id="pctOut" style="margin:0">Type a number to see how to say it.</p></div>';
+  h+='<details><summary>More phrases for other task types</summary><div style="margin-top:10px">'+oth.map(grp).join('')+'</div></details>';
+  return h;
+}
+
+/* ============================================================
+   Write tab
+   ============================================================ */
+function promptText(){
+  var m=state.mode,k=MODE[m].kind,t=figInfo().t;
+  var noun={line:'line graph',bar:'bar chart',barh:'bar chart',stack:'stacked bar chart',pie:'pie chart',pies:'pie charts',table:'table',mixed:'bar chart and line graph',tablepie:'table and pie chart',map:'maps',flow:'diagram',cycle:'diagram'}[m];
+  var verb=(m==='pies'||k==='map')?'show':'shows';
+  return 'The '+noun+' below '+verb+' '+lcFirst(String(t).replace(/\.+$/,''))+'. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.';
+}
+var CHECKS={
+  data:['Introduction paraphrases the title','Clear overview with no detailed numbers','Key features selected, not every number','Figures used to support comparisons','Range of trend and comparison language','Units and time periods are correct','At least 150 words'],
+  map:['Introduction paraphrases the title','Overview says what changed overall','Changes grouped logically','Locations described clearly','Past tense used for past maps','Passive voice used for changes','At least 150 words'],
+  process:['Introduction paraphrases the title','Overview gives the number of stages','Every stage is covered in order','Sequencing words used','Passive voice used for man-made steps','Start and end are clear','At least 150 words']
+};
+function wordCount(t){t=t.trim();return t?t.split(/\s+/).length:0;}
+function fmtTime(s){var m=Math.floor(s/60),x=s%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function writeHTML(){
+  var kind=MODE[state.mode].kind,list=CHECKS[kind==='data'?'data':kind],wc=wordCount(state.writing);
+  var h='<div class="prompt">'+esc(promptText())+'<div class="note">Write at least 150 words. Spend about 20 minutes.</div></div>';
+  h+='<div class="timerrow"><span class="timer'+(state.timer.left<=180?' low':'')+'" id="timerDisp">'+fmtTime(state.timer.left)+'</span><button class="btn solid sm" data-act="timerToggle" id="timerBtn">'+(state.timer.running?'Pause':'Start')+'</button><button class="btn sm" data-act="timerReset">Reset</button><span class="wc" id="wc">'+wc+' words</span></div>';
+  h+='<textarea class="big" id="writing" placeholder="Write your report here…" aria-label="Your report">'+esc(state.writing)+'</textarea><div class="wcbar"><div id="wcfill" style="width:'+Math.min(100,wc/150*100)+'%"></div></div>';
+  h+='<h3>Self-check</h3><ul class="checks">'+list.map(function(c,i){var id=kind+i;return '<li><label><input type="checkbox" data-check="'+id+'"'+(state.checks[id]?' checked':'')+'><span>'+esc(c)+'</span></label></li>';}).join('')+'</ul>';
+  h+='<div class="btnrow"><button class="btn sm" data-act="copyWriting">Copy my report</button></div>';
+  return h;
+}
+var timerId=0;
+function timerTick(){
+  state.timer.left=Math.max(0,state.timer.left-1);
+  var el=$('#timerDisp');
+  if(el){el.textContent=fmtTime(state.timer.left);el.classList.toggle('low',state.timer.left<=180);}
+  if(state.timer.left===0){stopTimer();var b=$('#timerBtn');if(b)b.textContent='Start';toast('Time is up');}
+}
+function stopTimer(){clearInterval(timerId);state.timer.running=false;}
+
+/* ============================================================
+   Data tab
+   ============================================================ */
+function dataTabHTML(){
+  var kind=MODE[state.mode].kind;
+  if(kind==='map')return mapTabHTML();
+  if(kind==='process')return processTabHTML();
+  var d=state.data;
+  var h='<p class="note" style="margin-top:0">Type or paste your own numbers. Every view updates as you type. Sample data is made up for practice.</p>';
+  h+='<div class="field"><label for="fTitle">Chart title</label><input id="fTitle" data-f="title" value="'+esc(d.title)+'"></div>';
+  h+='<div class="row2"><div class="field"><label for="fUnit">Unit</label><input id="fUnit" data-f="unit" value="'+esc(d.unit)+'" placeholder="%, hours, million"></div><div class="field"><label for="fX">Column label</label><input id="fX" data-f="xLabel" value="'+esc(d.xLabel)+'" placeholder="Year, Age group"></div></div>';
+  h+='<div class="gridwrap"><table class="edit"><thead><tr><th class="corner"></th>';
+  d.cats.forEach(function(c,j){h+='<th><div class="cellbox"><input class="hdr" data-kind="cat" data-c="'+j+'" value="'+esc(c)+'" aria-label="Column '+(j+1)+' heading"><button class="x" data-act="delCol" data-c="'+j+'" aria-label="Delete column '+(j+1)+'">×</button></div></th>';});
+  h+='</tr></thead><tbody>';
+  d.series.forEach(function(s,i){
+    h+='<tr><th><div class="cellbox"><input class="rname" data-kind="name" data-r="'+i+'" value="'+esc(s.name)+'" aria-label="Series '+(i+1)+' name" style="border-left:6px solid '+colorOf(i)+'"><button class="x" data-act="delRow" data-r="'+i+'" aria-label="Delete series '+(i+1)+'">×</button></div></th>';
+    s.values.forEach(function(v,j){h+='<td><input data-kind="val" data-r="'+i+'" data-c="'+j+'" inputmode="decimal" value="'+(isNum(v)?v:'')+'" aria-label="'+esc(sName(i))+', '+esc(d.cats[j])+'"></td>';});
+    h+='</tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="btnrow"><button class="btn sm" data-act="addRow">+ Series</button><button class="btn sm" data-act="addCol">+ Column</button><button class="btn sm" data-act="transpose">Swap rows and columns</button></div>';
+  h+='<details><summary>Paste from a spreadsheet</summary><textarea id="paste" rows="6" placeholder="Year\t2000\t2010\t2020&#10;UK\t26\t85\t95&#10;Brazil\t3\t41\t74"></textarea><p class="note">First row: column headings. First column: series names. Tabs, commas or semicolons all work.</p><div class="btnrow"><button class="btn sm solid" data-act="applyPaste">Use pasted data</button></div></details>';
+  h+='<div class="samples"><span>Try a sample:</span>'+Object.keys(SAMPLES).map(function(k){return '<button class="chip" data-act="sample" data-k="'+k+'">'+esc(SAMPLES[k].label)+'</button>';}).join('')+'</div>';
+  return h;
+}
+function mapTabHTML(){
+  var M=state.map;
+  var h='<p class="note" style="margin-top:0">Paint two maps, an earlier one and a later one. Choose a map, pick a feature, then draw on the map. Painting switches the view to Edit.</p>';
+  h+='<div class="field"><label for="mTitle">Title</label><input id="mTitle" data-f="mtitle" value="'+esc(M.title)+'"></div>';
+  h+='<div class="row2"><div class="field"><label for="mA">First map label</label><input id="mA" data-f="labelA" value="'+esc(M.labelA)+'"></div><div class="field"><label for="mB">Second map label</label><input id="mB" data-f="labelB" value="'+esc(M.labelB)+'"></div></div>';
+  h+='<div class="btnrow">'+chip('mapTarget','Paint '+esc(M.labelA),state.mapView==='edit'&&state.mapEdit==='a','data-t="a"')+chip('mapTarget','Paint '+esc(M.labelB),state.mapView==='edit'&&state.mapEdit==='b','data-t="b"')+'</div>';
+  h+='<div class="pals">'+Object.keys(TILES).map(function(ch){return '<button class="pal" data-act="brush" data-ch="'+ch+'" aria-pressed="'+(state.brush===ch)+'"><i style="background:'+TILES[ch].c+'"></i>'+TILES[ch].name+'</button>';}).join('')+'</div>';
+  h+='<div class="btnrow"><button class="btn sm" data-act="mapCopy" data-d="ab">Copy first → second</button><button class="btn sm" data-act="mapCopy" data-d="ba">Copy second → first</button><button class="btn sm" data-act="mapClear">Clear the map being painted</button></div>';
+  h+='<div class="samples"><span>Sample:</span><button class="chip" data-act="mapSample">Willow Village, 1995 and 2020</button></div>';
+  return h;
+}
+function processTabHTML(){
+  var P=state.process;
+  var txt=P.steps.map(function(s){return s.detail?s.title+': '+s.detail:s.title;}).join('\n');
+  var h='<p class="note" style="margin-top:0">Write one stage per line. Use “Title: detail” if you want a short heading and a longer description.</p>';
+  h+='<div class="field"><label for="pTitle">Diagram title</label><input id="pTitle" data-f="ptitle" value="'+esc(P.title)+'"></div>';
+  h+='<div class="field"><label for="pSteps">Stages (one per line)</label><textarea id="pSteps" rows="10" style="font-size:14px;line-height:1.5">'+esc(txt)+'</textarea></div>';
+  h+='<div class="samples"><span>Try a sample:</span>'+Object.keys(PROCESS_SAMPLES).map(function(k){return '<button class="chip" data-act="pSample" data-k="'+k+'">'+esc(PROCESS_SAMPLES[k].label)+'</button>';}).join('')+'</div>';
+  return h;
+}
+function parseSteps(text){
+  return text.split(/\r?\n/).map(function(l){return l.trim();}).filter(Boolean).map(function(l){
+    var i=l.indexOf(':');
+    if(i>0&&i<40)return {title:l.slice(0,i).trim(),detail:l.slice(i+1).trim()};
+    return {title:l,detail:''};
+  });
+}
+function parsePaste(text){
+  var lines=text.replace(/\r/g,'').split('\n').filter(function(l){return l.trim();});
+  if(lines.length<2)return null;
+  var delim=lines[0].indexOf('\t')>=0?'\t':(lines[0].indexOf(';')>=0&&lines[0].indexOf(',')<0)?';':',';
+  var rows=lines.map(function(l){return l.split(delim).map(function(x){return x.trim().replace(/^"|"$/g,'');});});
+  var cats=rows[0].slice(1);if(!cats.length)return null;
+  return {xLabel:rows[0][0]||'',cats:cats,series:rows.slice(1).map(function(r,i){return {name:r[0]||('Series '+(i+1)),values:cats.map(function(_,j){return toNum(r[j+1]);})};})};
+}
+
+/* ============================================================
+   Panel
+   ============================================================ */
+function renderPanel(){
+  $$('#tabs .tab').forEach(function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-tab')===state.tab));});
+  var el=$('#tabbody'),k=MODE[state.mode].kind;
+  if(state.tab==='data')el.innerHTML=dataTabHTML();
+  else if(state.tab==='insights')el.innerHTML=k==='map'?mapInsights():k==='process'?processInsights():dataInsights();
+  else if(state.tab==='language')el.innerHTML=languageHTML();
+  else el.innerHTML=writeHTML();
+}
+function renderOptions(){
+  $('#opts').innerHTML=MODES.map(function(m){
+    return '<button class="opt" data-mode="'+m.id+'" aria-pressed="'+(state.mode===m.id)+'"><svg viewBox="0 0 48 32" aria-hidden="true">'+m.icon+'</svg><span class="ot"><b>'+m.group+'</b><em class="sub">'+m.sub+'</em></span></button>';
+  }).join('');
+}
+function setMode(id){
+  if(!MODE[id])return;
+  stopPlay();
+  state.mode=id;state.animate=true;state.hover=null;state.mapFocus=null;state.focus=null;
+  if(id==='tablepie'||id==='pie')state.pieCat=clamp(state.pieCat,0,Math.max(0,state.data.cats.length-1));
+  renderOptions();renderPanel();render();save();
+}
+
+/* ============================================================
+   Actions
+   ============================================================ */
+var playId=0;
+function stopPlay(){clearInterval(playId);state.playing=false;}
+function startPlay(kind){
+  stopPlay();state.playing=true;
+  if(kind==='process'){var n=state.process.steps.length;if(state.pStep<0||state.pStep>=n-1)state.pStep=0;}
+  playId=setInterval(function(){
+    if(kind==='process'){
+      var n=state.process.steps.length;
+      if(state.pStep>=n-1){stopPlay();} else state.pStep++;
+    }else{
+      var c=state.data.cats.length;
+      if(state.pieCat>=c-1){stopPlay();} else state.pieCat++;
+    }
+    render();if(state.tab==='insights')renderPanel();
+  },kind==='process'?1500:1400);
+  render();
+}
+function applyData(nd,keepTitle){
+  state.data=nd;
+  state.hidden=new Set();state.lock=null;state.focus=null;state.sort=null;state.pieCat=0;
+  state.lineSeries=nd.series.length>1?[nd.series.length-1]:[];
+  normData();state.animate=true;
+}
+function getData(el){var o={};if(!el||!el.attributes)return o;for(var i=0;i<el.attributes.length;i++){var at=el.attributes[i];if(at.name.indexOf('data-')===0)o[at.name.slice(5)]=at.value;}return o;}
+function act(a,el,e){
+  var D=getData(el);
+  switch(a){
+    case 'theme':{
+      var root=document.documentElement,cur=root.getAttribute('data-theme'),dark=cur?cur==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.setAttribute('data-theme',dark?'light':'dark');$('#themeBtn').textContent=dark?'Dark mode':'Light mode';save();render();return;
+    }
+    case 'resetAll':{
+      if(!el.getAttribute('data-armed')){el.setAttribute('data-armed','1');el.textContent='Click again to confirm';setTimeout(function(){el.removeAttribute('data-armed');el.textContent='Start over';},3000);return;}
+      try{localStorage.removeItem(KEY);}catch(x){}
+      stopPlay();stopTimer();var th=document.documentElement.getAttribute('data-theme');state=defaultState();
+      if(th)document.documentElement.setAttribute('data-theme',th);
+      renderOptions();renderPanel();render();return;
+    }
+    case 'tab':state.tab=D.tab;renderPanel();return;
+    case 'keyPts':case 'showVals':case 'stackPct':case 'heat':case 'delta':state[a]=!state[a];state.animate=false;render();return;
+    case 'toggleLine':{
+      var i=+D.i,k=state.lineSeries.indexOf(i);
+      if(k>=0)state.lineSeries.splice(k,1);else state.lineSeries.push(i);
+      render();return;
+    }
+    case 'pieStep':{stopPlay();var n=state.data.cats.length;state.pieCat=(state.pieCat+(+D.d)+n)%n;render();if(state.tab==='insights')renderPanel();return;}
+    case 'piePlay':{if(state.playing){stopPlay();render();}else{state.pieCat=0;startPlay('pie');}return;}
+    case 'pieCol':state.pieCat=+D.c;render();if(state.tab==='insights')renderPanel();return;
+    case 'sort':{
+      var c=+D.c;
+      if(!state.sort||state.sort.col!==c)state.sort={col:c,dir:'desc'};
+      else if(state.sort.dir==='desc')state.sort={col:c,dir:'asc'};
+      else state.sort=null;
+      render();return;
+    }
+    case 'sortClear':state.sort=null;render();return;
+    case 'legend':{
+      var li=+D.i;
+      if(state.hidden.has(li))state.hidden.delete(li);else{
+        if(state.hidden.size>=state.data.series.length-1){toast('Keep at least one series visible');return;}
+        state.hidden.add(li);
+      }
+      if(state.lock===li)state.lock=null;
+      state.animate=false;render();if(state.tab==='insights')renderPanel();return;
+    }
+    case 'focus':{
+      var s=+D.s,i2=+D.i;
+      if(isFocus(s,i2)){state.focus=null;state.lock=null;}else{state.focus={s:s,i:i2};state.lock=s;state.hidden.delete(s);}
+      render();renderPanel();return;
+    }
+    case 'lock':{var s2=+D.s;state.lock=state.lock===s2?null:s2;state.focus=null;render();renderPanel();return;}
+    case 'clearFocus':state.lock=null;state.focus=null;render();renderPanel();return;
+    case 'mapView':state.mapView=D.v;state.animate=false;render();if(state.tab==='data')renderPanel();return;
+    case 'mapTarget':state.mapEdit=D.t;state.mapView='edit';render();renderPanel();return;
+    case 'brush':state.brush=D.ch;if(state.mapView!=='edit'){state.mapView='edit';render();}else{renderLegend();}renderPanel();return;
+    case 'mapClear':{var gr=state.map[state.mapEdit];for(var r=0;r<ROWS;r++)for(var cc=0;cc<COLS;cc++)gr[r][cc]='g';state.mapView='edit';render();save();return;}
+    case 'mapCopy':{var from=D.d==='ab'?'a':'b',to=D.d==='ab'?'b':'a';state.map[to]=state.map[from].map(function(r){return r.slice();});render();save();toast('Map copied');return;}
+    case 'mapSample':{state.map={title:MAP_SAMPLE.title,labelA:MAP_SAMPLE.labelA,labelB:MAP_SAMPLE.labelB,a:gridFrom(MAP_SAMPLE.a),b:gridFrom(MAP_SAMPLE.b)};state.mapView='slider';state.mapSplit=.5;state.mapFocus=null;renderPanel();render();save();return;}
+    case 'mapT':{state.mapFocus=state.mapFocus===D.k?null:D.k;if(state.mapFocus)state.mapView='changes';render();renderPanel();return;}
+    case 'pGo':{stopPlay();var gi=+D.i;state.pStep=state.pStep===gi?-1:gi;render();if(state.tab==='insights')renderPanel();return;}
+    case 'pPrev':{stopPlay();var np=state.process.steps.length;state.pStep=state.pStep<=0?np-1:state.pStep-1;render();if(state.tab==='insights')renderPanel();return;}
+    case 'pNext':{stopPlay();var nn=state.process.steps.length;state.pStep=state.pStep>=nn-1?0:state.pStep+1;render();if(state.tab==='insights')renderPanel();return;}
+    case 'pPlay':{if(state.playing){stopPlay();render();}else startPlay('process');return;}
+    case 'pAll':stopPlay();state.pStep=-1;render();if(state.tab==='insights')renderPanel();return;
+    case 'pSample':{var ps=PROCESS_SAMPLES[D.k];state.process={title:ps.title,steps:clone(ps.steps)};state.pStep=-1;stopPlay();if(MODE[state.mode].kind==='process')state.mode=ps.mode;state.animate=true;renderOptions();renderPanel();render();save();return;}
+    case 'sample':applyData(clone(SAMPLES[D.k])); renderPanel();render();save();return;
+    case 'addRow':{var d=state.data;d.series.push({name:'Series '+(d.series.length+1),values:d.cats.map(function(){return null;})});renderPanel();render();save();return;}
+    case 'addCol':{var d2=state.data;d2.cats.push(String(d2.cats.length+1));d2.series.forEach(function(s){s.values.push(null);});renderPanel();render();save();return;}
+    case 'delRow':{var d3=state.data;if(d3.series.length<=1){toast('Keep at least one series');return;}d3.series.splice(+D.r,1);state.hidden=new Set();state.lock=null;normData();renderPanel();render();save();return;}
+    case 'delCol':{var d4=state.data;if(d4.cats.length<=1){toast('Keep at least one column');return;}var cj=+D.c;d4.cats.splice(cj,1);d4.series.forEach(function(s){s.values.splice(cj,1);});normData();renderPanel();render();save();return;}
+    case 'transpose':{
+      var d5=state.data,newCats=d5.series.map(function(s,i){return sName(i);});
+      var ns=d5.cats.map(function(c,j){return {name:String(c),values:d5.series.map(function(s){return s.values[j];})};});
+      applyData({title:d5.title,unit:d5.unit,xLabel:'',cats:newCats,series:ns});renderPanel();render();save();return;
+    }
+    case 'applyPaste':{
+      var res=parsePaste($('#paste').value);
+      if(!res||!res.series.length){toast('Need a heading row and at least one data row');return;}
+      var cur=state.data;
+      applyData({title:cur.title,unit:cur.unit,xLabel:res.xLabel||cur.xLabel,cats:res.cats,series:res.series});
+      renderPanel();render();save();toast('Data updated');return;
+    }
+    case 'copy':copyText(D.text||'');return;
+    case 'copyWriting':copyText(state.writing);return;
+    case 'timerToggle':{
+      if(state.timer.running){stopTimer();el.textContent='Start';}
+      else{if(state.timer.left<=0)state.timer.left=1200;state.timer.running=true;timerId=setInterval(timerTick,1000);el.textContent='Pause';}
+      return;
+    }
+    case 'timerReset':{stopTimer();state.timer.left=1200;renderPanel();return;}
+  }
+}
+
+/* ============================================================
+   Wiring
+   ============================================================ */
+function wire(){
+  tipEl=$('#tip');toastEl=$('#toast');
+  document.addEventListener('click',function(e){
+    var mo=e.target.closest('[data-mode]');
+    if(mo){setMode(mo.getAttribute('data-mode'));return;}
+    var el=e.target.closest('[data-act]');
+    if(el){act(el.getAttribute('data-act'),el,e);return;}
+    // lock a series by clicking a chart element
+    var st=e.target.closest('#stage [data-s]');
+    if(st){var s=+st.getAttribute('data-s');state.lock=state.lock===s?null:s;state.focus=null;applyHighlight();}
+  });
+  document.addEventListener('keydown',function(e){
+    if((e.key==='Enter'||e.key===' ')&&e.target.closest&&e.target.closest('g.pgroup')){e.preventDefault();act('pGo',e.target.closest('g.pgroup'),e);}
+  });
+  document.addEventListener('change',function(e){
+    var t=e.target;
+    if(t.matches('select[data-bind="pieCat"]')){stopPlay();state.pieCat=+t.value;render();if(state.tab==='insights')renderPanel();}
+    else if(t.matches('select[data-bind="hiMode"]')){state.hiMode=t.value;render();}
+    else if(t.matches('input[data-check]')){state.checks[t.getAttribute('data-check')]=t.checked;}
+  });
+  document.addEventListener('input',function(e){
+    var t=e.target;
+    if(t.matches('input[data-f]')){
+      var f=t.getAttribute('data-f');
+      if(f==='title'||f==='unit'||f==='xLabel')state.data[f]=t.value;
+      else if(f==='mtitle')state.map.title=t.value;
+      else if(f==='labelA')state.map.labelA=t.value;
+      else if(f==='labelB')state.map.labelB=t.value;
+      else if(f==='ptitle')state.process.title=t.value;
+      softRender();
+    }else if(t.matches('input[data-kind]')){
+      var k=t.getAttribute('data-kind'),d=state.data;
+      if(k==='cat'){d.cats[+t.getAttribute('data-c')]=t.value;}
+      else if(k==='name'){d.series[+t.getAttribute('data-r')].name=t.value;}
+      else if(k==='val'){d.series[+t.getAttribute('data-r')].values[+t.getAttribute('data-c')]=toNum(t.value);}
+      state.animate=false;softRender();
+    }else if(t.id==='pSteps'){state.process.steps=parseSteps(t.value);state.pStep=Math.min(state.pStep,state.process.steps.length-1);softRender();}
+    else if(t.id==='writing'){
+      state.writing=t.value;var wc=wordCount(t.value);
+      $('#wc').textContent=wc+' words';$('#wcfill').style.width=Math.min(100,wc/150*100)+'%';save();
+    }else if(t.id==='pctIn'){
+      var v=parseFloat(t.value.replace('%',''));
+      $('#pctOut').textContent=isFinite(v)?(v<0||v>100?'Use a number from 0 to 100.':fmt(v)+'% is '+fracPhrase(v)+'. You can also say “'+(v>=50?'around ':'about ')+Math.round(v)+' per cent”.'):'Type a number to see how to say it.';
+    }
+  });
+  // hover highlighting on the stage
+  var stage=$('#stage');
+  stage.addEventListener('pointerover',function(e){
+    var el=e.target.closest('[data-s]'),v=el?+el.getAttribute('data-s'):null;
+    if(v!==state.hover){state.hover=v;applyHighlight();}
+  });
+  stage.addEventListener('pointermove',function(e){
+    var el=e.target.closest('[data-t]');
+    if(el)showTip(tips[+el.getAttribute('data-t')]||'',e);
+    else if(!e.target.closest('svg.line'))hideTip();
+  });
+  stage.addEventListener('pointerleave',function(){state.hover=null;applyHighlight();hideTip();});
+  var lg=$('#legend');
+  lg.addEventListener('pointerover',function(e){
+    var el=e.target.closest('.lg[data-i]');
+    if(MODE[state.mode].kind!=='data')return;
+    var v=el?+el.getAttribute('data-i'):null;if(v!==state.hover){state.hover=v;applyHighlight();}
+  });
+  lg.addEventListener('pointerleave',function(){state.hover=null;applyHighlight();});
+  if(window.ResizeObserver){
+    var rt=0;new ResizeObserver(function(){
+      var w=stageWidth();if(Math.abs(w-lastW)<2)return;
+      clearTimeout(rt);rt=setTimeout(function(){state.animate=false;render();},120);
+    }).observe(stage);
+  }else window.addEventListener('resize',function(){state.animate=false;render();});
+}
+
+/* init */
+load();
+wire();
+renderOptions();
+renderPanel();
+render();
+var th=document.documentElement.getAttribute('data-theme');
+if(th)$('#themeBtn').textContent=th==='dark'?'Light mode':'Dark mode';
+else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)$('#themeBtn').textContent='Light mode';
+})();
+</script>
+</body>
+</html>
